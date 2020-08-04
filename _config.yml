@@ -1,3 +1,23 @@
 theme: jekyll-theme-cayman
 title: Joseph Konka
 description: Data Scientist Junior
+
+ [[params.social]]
+    icon = "facebook"
+    icon_pack = "fa"
+    link = "//facebook.com/josephkonka1999"
+
+ [[params.social]]
+    icon = "linkedin"
+    icon_pack = "fa"
+    link = "//linkedin.com/in/joseph-koami-konka"
+
+ [[params.social]]
+    icon = "github"
+    icon_pack = "fa"
+    link = "//github.com/joekakone"
+
+ [[params.social]]
+    icon = "twitter"
+    icon_pack = "fa"
+    link = "//twitter.com/joe_kakone"
