@@ -61,7 +61,7 @@
             <h2 class="h4 text-primary font-weight-normal mb-0">Hi, I am</h2>
             <h1 class="text-uppercase text-xl mb-0">Joseph <span class="text-primary">Konka</span></h1>
             <h2 class="h4 font-weight-normal mb-5">Data Consultant & Trainer</h2>
-            <p class="text-shadow text-justify">How data can help you to increase your activites ? I am a Mathematics Bachelor graduate from University of Lomé with a strong interest in data science. I'm currently working at RINTIO.</p>
+            <p class="text-shadow text-justify">How data can help you to increase your activites ? Knowing what happened, understanding why, and predicting what might happen are the big issues in data analysis for an organization that wants to make informed decisions.</p>
           </div>
         </div>
       </div>
@@ -210,7 +210,7 @@
           </div>
           <div class="col-md-6 mb-5">
             <h3 class="h4">Deputes.fr</h3>
-            <p class="text-muted text-small pl-3">I've built a dashboard to view French parliament data <strong>Assemblée Nationale Française. It is an bokeh web application. You can see the dashboard <a href="https://deputes-fr-jk.herokuapp.com/" target="_blank">here</a>.</p>
+            <p class="text-muted text-small pl-3">I've built a dashboard to view French parliament data <strong>Assemblée Nationale Française</strong>. It is an bokeh web application. You can see the dashboard <a href="https://deputes-fr-jk.herokuapp.com/" target="_blank">here</a>.</p>
           </div>
         </div>
       </div>
@@ -274,4 +274,31 @@
     <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </body>
+  <!-- Messenger Plugin de discussion Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin de discussion code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "2130664133866857");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v12.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 </html>
