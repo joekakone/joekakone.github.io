@@ -1,1 +1,21 @@
 /* your styles go here */
+
+.contact-item-s {
+    align-items: center;
+}
+
+.contact-item-logo {
+    border: 1px solid black;
+    width: 1cm;
+}
+
+.contact-item-logo i {
+    border: 1px solid black;
+    width: 98%;
+    margin: auto;
+}
+
+#contact a {
+    color: black;
+}
+
