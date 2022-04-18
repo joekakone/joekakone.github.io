@@ -5,13 +5,11 @@
 }
 
 .contact-item-logo {
-    border: 1px solid black;
     width: 1cm;
 }
 
 .contact-item-logo i {
-    border: 1px solid black;
-    width: 98%;
+    width: max-content;
     margin: auto;
 }
 
