@@ -2,28 +2,22 @@
 // For demo purposes, can be deleted
 // ------------------------------------------------------ //
 
-var stylesheet = $('link#theme-stylesheet');
-$("<link id='new-stylesheet' rel='stylesheet'>").insertAfter(stylesheet);
-var alternateColour = $('link#new-stylesheet');
+// Asigning Alternative stylesheet & insert it in its place
+var stylesheet = document.getElementById("theme-stylesheet");
+var alternateStylesheet = document.createElement("link");
+alternateStylesheet.setAttribute("id", "new-stylesheet");
+alternateStylesheet.setAttribute("rel", "stylesheet");
+stylesheet.parentNode.insertBefore(alternateStylesheet, stylesheet.nextSibling);
 
-if ($.cookie("theme_csspath")) {
-    alternateColour.attr("href", $.cookie("theme_csspath"));
-}
-
-$("#colour").change(function () {
-
-    if ($(this).val() !== '') {
-
-        var theme_csspath = $(this).val();
-
-        alternateColour.attr("href", theme_csspath);
-
-        $.cookie("theme_csspath", theme_csspath, {
-            expires: 365,
-            path: document.URL.substr(0, document.URL.lastIndexOf('/'))
-        });
-
-    }
-
-    return false;
+// Style Switcher
+var styleSwitcher = document.getElementById("colour");
+styleSwitcher.addEventListener("change", function () {
+    var alternateColor = styleSwitcher.value;
+    alternateStylesheet.setAttribute("href", alternateColor);
+    Cookies.set("switcherColor", alternateColor, { expires: 365, path: "/" });
 });
+
+var theCookie = Cookies.get("switcherColor");
+if (theCookie) {
+    alternateStylesheet.setAttribute("href", theCookie);
+}
