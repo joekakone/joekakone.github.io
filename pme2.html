@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stratégie Data PME | Excellence Décisionnelle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            gold: '#c2a35d',
+                            accent: '#3b82f6',
+                            surface: '#f8fafc'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, #1e293b 0%, #0f172a 100%);
+        }
+        .chart-container {
+            position: relative;
+            height: 300px;
+            width: 100%;
+        }
+        .myth-card {
+            perspective: 1000px;
+            height: 320px;
+        }
+        .myth-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+        }
+        .myth-card.flipped .myth-inner {
+            transform: rotateY(180deg);
+        }
+        .myth-front, .myth-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            text-align: center;
+        }
+        .myth-back {
+            transform: rotateY(180deg);
+            background: #1e293b;
+            color: white;
+        }
+        .step-number {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-brand-surface text-brand-dark font-sans selection:bg-brand-gold selection:text-white">
+
+    <!-- Nav -->
+    <nav class="fixed w-full z-50 glass border-b border-slate-200/20 bg-white/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-brand-dark rounded-lg flex items-center justify-center">
+                    <span class="text-brand-gold font-bold text-xl">D</span>
+                </div>
+                <span class="text-xl font-extrabold tracking-tighter uppercase">Konka<span class="text-brand-gold">Data</span></span>
+            </div>
+            <div class="hidden md:flex space-x-10 text-sm font-semibold uppercase tracking-widest text-slate-500">
+                <a href="#context" class="hover:text-brand-dark transition-colors">Vision</a>
+                <a href="#pillars" class="hover:text-brand-dark transition-colors">Piliers</a>
+                <a href="#roadmap" class="hover:text-brand-dark transition-colors">Action</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-gradient min-h-screen flex items-center pt-20 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brand-gold/5 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <span class="inline-block px-4 py-1 rounded-full bg-brand-gold/10 text-brand-gold text-xs font-bold uppercase tracking-widest mb-6">
+                    Édition PME & ETI 2026
+                </span>
+                <h1 class="text-6xl md:text-8xl font-serif text-white leading-none mb-8">
+                    La Data comme <br><span class="italic text-brand-gold">Héritage Stratégique.</span>
+                </h1>
+                <p class="text-xl text-slate-400 font-light leading-relaxed mb-12">
+                    Ne subissez plus vos chiffres. Transformez l'invisible en actif tangible pour piloter votre croissance avec une précision chirurgicale.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <a href="#pillars" class="px-10 py-5 bg-brand-gold hover:bg-white text-brand-dark font-bold rounded-xl transition-all duration-300 shadow-2xl shadow-brand-gold/20 text-center">
+                        Découvrir les enjeux
+                    </a>
+                    <a href="#context" class="px-10 py-5 border border-slate-700 hover:bg-slate-800 text-white font-bold rounded-xl transition-all text-center">
+                        Pourquoi nous ?
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Context -->
+    <section id="context" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-24 items-center">
+                <div class="relative">
+                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-brand-gold/10 rounded-full blur-3xl"></div>
+                    <h2 class="text-5xl font-serif mb-10 leading-tight">L'Intuition a des limites,<br><span class="text-brand-gold italic">la donnée n'en a pas.</span></h2>
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                        Beaucoup de dirigeants pilotent encore à vue. Dans un marché saturé, la différence entre le succès et la stagnation réside dans l'exploitation de vos flux internes.
+                    </p>
+                    <div class="bg-slate-50 p-10 rounded-3xl border-l-8 border-brand-gold italic text-xl text-slate-700 font-serif">
+                        "La donnée est le nouveau pétrole, mais c'est le raffinage qui crée la fortune."
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="p-8 bg-slate-50 rounded-2xl flex flex-col justify-center text-center">
+                        <span class="text-4xl font-extrabold text-brand-gold mb-2">+20%</span>
+                        <span class="text-xs uppercase tracking-tighter text-slate-500 font-bold">Marge Moyenne</span>
+                    </div>
+                    <div class="p-8 bg-brand-dark text-white rounded-2xl flex flex-col justify-center text-center">
+                        <span class="text-4xl font-extrabold text-brand-gold mb-2">-40%</span>
+                        <span class="text-xs uppercase tracking-tighter text-slate-400 font-bold">Coûts de Stock</span>
+                    </div>
+                    <div class="col-span-2 p-10 bg-slate-900 text-white rounded-2xl">
+                        <p class="text-sm font-light text-slate-400 mb-4">Focus Décisionnel</p>
+                        <h4 class="text-xl font-bold mb-4">Passer du "Je pense" au "Je sais".</h4>
+                        <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                            <div class="bg-brand-gold h-full w-3/4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pillars (Tabs) -->
+    <section id="pillars" class="py-32 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <span class="text-brand-gold font-bold uppercase tracking-widest text-xs">Architecture de Performance</span>
+                <h2 class="text-5xl font-serif mt-4">Les Trois Piliers de la Transformation</h2>
+            </div>
+
+            <!-- Custom Tabs -->
+            <div class="flex flex-wrap justify-center gap-4 mb-16">
+                <button onclick="switchTab('client')" id="tab-client" class="tab-btn px-8 py-4 rounded-2xl font-bold transition-all duration-500 text-sm tracking-widest uppercase border border-slate-200 bg-white hover:border-brand-gold">
+                    Connaissance Client
+                </button>
+                <button onclick="switchTab('ops')" id="tab-ops" class="tab-btn px-8 py-4 rounded-2xl font-bold transition-all duration-500 text-sm tracking-widest uppercase border border-slate-200 bg-white hover:border-brand-gold">
+                    Excellence Opérationnelle
+                </button>
+                <button onclick="switchTab('strat')" id="tab-strat" class="tab-btn px-8 py-4 rounded-2xl font-bold transition-all duration-500 text-sm tracking-widest uppercase border border-slate-200 bg-white hover:border-brand-gold">
+                    Décision Stratégique
+                </button>
+            </div>
+
+            <div class="bg-white rounded-[3rem] shadow-2xl shadow-slate-200/50 p-8 md:p-20 overflow-hidden">
+                <!-- Tab: Client -->
+                <div id="content-client" class="tab-content hidden animate-in fade-in slide-in-from-bottom-10 duration-700">
+                    <div class="grid lg:grid-cols-2 gap-20 items-center">
+                        <div>
+                            <h3 class="text-4xl font-serif mb-8 leading-tight">Hyper-Personnalisation : <br><span class="text-brand-gold italic">L'Art de Fidéliser.</span></h3>
+                            <p class="text-slate-600 mb-10 leading-relaxed text-lg">
+                                Identifiez vos segments à haute valeur ajoutée. Ne perdez plus de ressources sur des campagnes génériques ; parlez à chacun selon ses besoins réels.
+                            </p>
+                            <div class="space-y-6">
+                                <div class="flex gap-4 p-6 bg-slate-50 rounded-2xl">
+                                    <div class="text-brand-gold">✓</div>
+                                    <p class="text-sm font-semibold">Segmentation Prédictive (VIP/Churn)</p>
+                                </div>
+                                <div class="flex gap-4 p-6 bg-slate-50 rounded-2xl">
+                                    <div class="text-brand-gold">✓</div>
+                                    <p class="text-sm font-semibold">Analyse du cycle de vie client (LTV)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="chartClient"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab: Ops -->
+                <div id="content-ops" class="tab-content hidden animate-in fade-in slide-in-from-bottom-10 duration-700">
+                    <div class="grid lg:grid-cols-2 gap-20 items-center">
+                        <div>
+                            <h3 class="text-4xl font-serif mb-8 leading-tight">Optimisation Totale : <br><span class="text-brand-gold italic">Zéro Gaspillage.</span></h3>
+                            <p class="text-slate-600 mb-10 leading-relaxed text-lg">
+                                Réduisez vos coûts dormants. La data permet d'équilibrer vos stocks et de synchroniser votre logistique avec la demande réelle.
+                            </p>
+                            <div class="space-y-6">
+                                <div class="flex gap-4 p-6 bg-slate-50 rounded-2xl">
+                                    <div class="text-brand-gold">✓</div>
+                                    <p class="text-sm font-semibold">Gestion prédictive des ruptures</p>
+                                </div>
+                                <div class="flex gap-4 p-6 bg-slate-50 rounded-2xl">
+                                    <div class="text-brand-gold">✓</div>
+                                    <p class="text-sm font-semibold">Monitoring des coûts en temps réel</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="chartOps"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab: Strat -->
+                <div id="content-strat" class="tab-content hidden animate-in fade-in slide-in-from-bottom-10 duration-700">
+                    <div class="grid lg:grid-cols-2 gap-20 items-center">
+                        <div>
+                            <h3 class="text-4xl font-serif mb-8 leading-tight">Tableau de Bord : <br><span class="text-brand-gold italic">Votre Cockpit de Décision.</span></h3>
+                            <p class="text-slate-600 mb-10 leading-relaxed text-lg">
+                                Ne naviguez plus à l'aveugle. Visualisez vos KPIs critiques en temps réel pour des arbitrages financiers instantanés et fiables.
+                            </p>
+                            <div class="space-y-6">
+                                <div class="flex gap-4 p-6 bg-slate-50 rounded-2xl">
+                                    <div class="text-brand-gold">✓</div>
+                                    <p class="text-sm font-semibold">Marge Nette vs Objectif (YTD)</p>
+                                </div>
+                                <div class="flex gap-4 p-6 bg-slate-50 rounded-2xl">
+                                    <div class="text-brand-gold">✓</div>
+                                    <p class="text-sm font-semibold">Taux de conversion et ROI par canal</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="chartStrat"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Myths (Cards) -->
+    <section class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-serif">Démystifier la Data</h2>
+                <p class="text-slate-500 mt-4">Cliquer pour découvrir la réalité.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="myth-card cursor-pointer" onclick="this.classList.toggle('flipped')">
+                    <div class="myth-inner">
+                        <div class="myth-front bg-slate-50 border border-slate-100 shadow-xl">
+                            <span class="text-5xl mb-6">💰</span>
+                            <h4 class="text-xl font-bold uppercase tracking-widest">Le Budget</h4>
+                            <p class="mt-4 text-slate-500 font-light">"C'est un investissement réservé aux multinationales."</p>
+                        </div>
+                        <div class="myth-back">
+                            <h4 class="text-brand-gold text-xl font-bold mb-4">La Réalité</h4>
+                            <p class="leading-relaxed">Des outils Open-Source et SaaS permettent de démarrer avec des budgets maîtrisés, rentabilisés dès le premier trimestre.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="myth-card cursor-pointer" onclick="this.classList.toggle('flipped')">
+                    <div class="myth-inner">
+                        <div class="myth-front bg-slate-50 border border-slate-100 shadow-xl">
+                            <span class="text-5xl mb-6">⚙️</span>
+                            <h4 class="text-xl font-bold uppercase tracking-widest">La Complexité</h4>
+                            <p class="mt-4 text-slate-500 font-light">"Il faut une armée de Data Scientists."</p>
+                        </div>
+                        <div class="myth-back bg-brand-gold !text-brand-dark">
+                            <h4 class="text-xl font-bold mb-4">La Réalité</h4>
+                            <p class="leading-relaxed">Une architecture simple et bien pensée peut être gérée en interne après une courte formation stratégique.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="myth-card cursor-pointer" onclick="this.classList.toggle('flipped')">
+                    <div class="myth-inner">
+                        <div class="myth-front bg-slate-50 border border-slate-100 shadow-xl">
+                            <span class="text-5xl mb-6">🔒</span>
+                            <h4 class="text-xl font-bold uppercase tracking-widest">Le Risque</h4>
+                            <p class="mt-4 text-slate-500 font-light">"La sécurité des données est un cauchemar."</p>
+                        </div>
+                        <div class="myth-back">
+                            <h4 class="text-brand-gold text-xl font-bold mb-4">La Réalité</h4>
+                            <p class="leading-relaxed">Le RGPD est un avantage concurrentiel. Une donnée sécurisée renforce la confiance de vos clients et votre valeur d'entreprise.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section id="roadmap" class="py-32 bg-slate-50">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-5xl font-serif text-center mb-24">Votre Route vers le <span class="italic text-brand-gold">Pilotage par la Donnée.</span></h2>
+            <div class="space-y-20">
+                <div class="flex flex-col md:flex-row gap-10 items-center">
+                    <div class="step-number w-16 h-16 flex items-center justify-center text-white font-black text-2xl rounded-2xl shrink-0">1</div>
+                    <div class="bg-white p-10 rounded-[2.5rem] shadow-xl border border-slate-100 flex-1">
+                        <h4 class="text-2xl font-bold mb-4">Audit et Cartographie</h4>
+                        <p class="text-slate-600">Identifier vos "gisements" de données : CRM, Facturation, Stocks. Où se cache votre valeur ?</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row-reverse gap-10 items-center">
+                    <div class="step-number w-16 h-16 flex items-center justify-center text-white font-black text-2xl rounded-2xl shrink-0">2</div>
+                    <div class="bg-white p-10 rounded-[2.5rem] shadow-xl border border-slate-100 flex-1">
+                        <h4 class="text-2xl font-bold mb-4">Architecture de Cockpit</h4>
+                        <p class="text-slate-600">Mise en place des connecteurs et création du premier tableau de bord décisionnel.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-10 items-center">
+                    <div class="step-number w-16 h-16 flex items-center justify-center text-white font-black text-2xl rounded-2xl shrink-0">3</div>
+                    <div class="bg-brand-dark p-10 rounded-[2.5rem] shadow-xl text-white flex-1">
+                        <h4 class="text-2xl font-bold text-brand-gold mb-4">Action et Itération</h4>
+                        <p class="text-slate-400">Prise de décision basée sur le dashboard. Mesure immédiate de l'impact financier.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark py-24 text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-5xl font-serif text-white mb-10 leading-tight">Prêt à changer de dimension ?</h2>
+            <button class="px-12 py-6 bg-brand-gold text-brand-dark font-black text-lg rounded-2xl hover:scale-105 transition-transform mb-20 shadow-2xl shadow-brand-gold/20">
+                Lancer mon Diagnostic Gratuit
+            </button>
+            <div class="border-t border-slate-800 pt-16 flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm tracking-widest uppercase">
+                <p>© 2026 Konka Analytics. Excellence Data pour PME.</p>
+                <div class="flex space-x-8 mt-8 md:mt-0">
+                    <a href="#" class="hover:text-white">Confidentialité</a>
+                    <a href="#" class="hover:text-white">LinkedIn</a>
+                    <a href="#" class="hover:text-white">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // State
+        const state = { activeTab: '', charts: {} };
+
+        function switchTab(id) {
+            if (state.activeTab === id) return;
+            
+            // UI Update
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(b => {
+                b.classList.remove('bg-brand-dark', 'text-white', 'border-brand-dark');
+                b.classList.add('bg-white', 'text-slate-500');
+            });
+
+            document.getElementById(`content-${id}`).classList.remove('hidden');
+            const btn = document.getElementById(`tab-${id}`);
+            btn.classList.add('bg-brand-dark', 'text-white', 'border-brand-dark');
+            btn.classList.remove('bg-white', 'text-slate-500');
+
+            state.activeTab = id;
+            initChart(id);
+        }
+
+        function initChart(id) {
+            if (state.charts[id]) return;
+            const ctx = document.getElementById(`chart${id.charAt(0).toUpperCase() + id.slice(1)}`).getContext('2d');
+            
+            let config = {
+                type: id === 'client' ? 'doughnut' : id === 'ops' ? 'bar' : 'line',
+                data: {},
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { position: 'bottom', labels: { font: { family: 'Inter', size: 12 } } } }
+                }
+            };
+
+            if (id === 'client') {
+                config.data = {
+                    labels: ['VIP (+60% CA)', 'Fidèles', 'Occasionnels'],
+                    datasets: [{
+                        data: [60, 30, 10],
+                        backgroundColor: ['#c2a35d', '#1e293b', '#e2e8f0'],
+                        borderWidth: 0
+                    }]
+                };
+            } else if (id === 'ops') {
+                config.data = {
+                    labels: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai'],
+                    datasets: [{
+                        label: 'Efficacité Logistique (%)',
+                        data: [65, 72, 85, 88, 94],
+                        backgroundColor: '#c2a35d',
+                        borderRadius: 8
+                    }]
+                };
+            } else {
+                config.data = {
+                    labels: ['S1', 'S2', 'S3', 'S4', 'S5'],
+                    datasets: [{
+                        label: 'Marge Optimisée',
+                        data: [15, 18, 22, 26, 31],
+                        borderColor: '#c2a35d',
+                        borderWidth: 4,
+                        tension: 0.4
+                    }]
+                };
+            }
+
+            state.charts[id] = new Chart(ctx, config);
+        }
+
+        window.onload = () => switchTab('client');
+    </script>
+</body>
+</html>
