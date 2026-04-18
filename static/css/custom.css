@@ -32,3 +32,25 @@
 
 .form-group{display:-ms-flexbox;display:flex;-ms-flex:0 0 auto;flex:0 0 auto;-ms-flex-flow:row wrap;flex-flow:row wrap;-ms-flex-align:center;align-items:center;margin-bottom:0}
 
+
+
+
+/* --- Social Networks --- */
+.social-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    color: #495057;
+    transition: var(--aj-transition);
+}
+
+.social-link:hover {
+    background-color: var(--aj-primary);
+    color: white !important;
+    border-color: var(--aj-primary) !important;
+    transform: translateY(-3px);
+}
