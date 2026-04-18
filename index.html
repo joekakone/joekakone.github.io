@@ -74,6 +74,15 @@
           <h1 class="text-uppercase text-xl mb-0">Joseph <span class="text-primary">Konka</span></h1>
           <h2 class="h4 fw-normal mb-5">Data Analytics Lead | BI & Data Strategy</h2>
           <!-- <h2 class="h4 fw-normal mb-5">Data Expert | Microsoft MVP | ITIL | PRINCE 2 | PMP</h2> -->
+           <!-- Social Networks -->
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item"><a class="social-link" href="https://wa.me/+22891518923" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+            <li class="list-inline-item"><a class="social-link" href="https://github.com/joekakone" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li class="list-inline-item"><a class="social-link" href="https://www.linkedin.com/in/joseph-koami-konka" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li class="list-inline-item"><a class="social-link" href="https://web.facebook.com/joekakonepage" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a class="social-link" href="https://twitter.com/joekakone" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a class="social-link" href="https://www.youtube.com/@algojungle" target="_blank"><i class="fab fa-youtube"></i></a></li>
+          </ul>
           <p class="text-shadow">Passionate about Data Transformation and Technology Innovation. Data Science Professional with +5 years experience as Data Scientist and Data Analyst. My expertises range from programming, data integration, data visualization to machine learning and operations with a focus on Python based-tools.</p>
           <p>
             <a href="https://joekakone.github.io/static/doc/Resume_202508_JOSEPH_KONKA.pdf" target="_blank"><button class="btn btn-primary text-uppercase"
@@ -612,27 +621,28 @@
   <!-- Footer-->
   <footer class="pt-5">
     <div class="container text-center py-5">
-      <div class="row px-4">
-        <div class="col-lg-7 mx-auto">
-          <h2 class="text-uppercase mb-0">Joseph Konka </h2>
-          <h6 class="text-primary text-uppercase mb-0 letter-spacing-3">Senior Data Analyst | Data Scientist</h6>
-          <p class="text-muted my-4">Project Management - Data Engineering - Data Analytics - Python Programming</p>
-          <ul class="list-inline mb-0">
-              <li class="list-inline-item"><a class="social-link" href="https://wa.me/+22891518923" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-              <li class="list-inline-item"><a class="social-link" href="https://github.com/joekakone" target="_blank"><i class="fab fa-github"></i></a></li>
-              <li class="list-inline-item"><a class="social-link" href="https://www.linkedin.com/in/joseph-koami-konka" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-              <li class="list-inline-item"><a class="social-link" href="https://web.facebook.com/joekakonepage" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-              <li class="list-inline-item"><a class="social-link" href="https://twitter.com/joekakone" target="_blank"><i class="fab fa-twitter"></i></a></li>
-              <li class="list-inline-item"><a class="social-link" href="https://www.youtube.com/@algojungle" target="_blank"><i class="fab fa-youtube"></i></a></li>
-          </ul>
+        <div class="row px-4">
+            <div class="col-lg-7 mx-auto">
+                <h2 class="text-uppercase mb-0">Joseph Konka </h2>
+                <h6 class="text-primary text-uppercase mb-0 letter-spacing-3">Senior Data Analyst | Data Scientist</h6>
+                <p class="text-muted my-4">Project Management - Data Engineering - Data Analytics - Python Programming</p>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"><a class="social-link" href="https://wa.me/+22891518923" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                    <li class="list-inline-item"><a class="social-link" href="https://github.com/joekakone" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li class="list-inline-item"><a class="social-link" href="https://www.linkedin.com/in/joseph-koami-konka" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li class="list-inline-item"><a class="social-link" href="https://web.facebook.com/joekakonepage" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="list-inline-item"><a class="social-link" href="https://twitter.com/joekakone" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a class="social-link" href="https://www.youtube.com/@algojungle" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
         </div>
-      </div>
     </div>
+
     <div class="copyrights px-4">
-      <div class="container py-4 border-top text-center">
+        <div class="container py-4 border-top text-center">
         <p class="mb-0 text-muted py-2">&copy; All rights reserved. Template designed by <a
             href="https://bootstrapious.com/p/bootstrap-resume">Bootstrapious</a>. </p>
-      </div>
+        </div>
     </div>
   </footer>
 
@@ -725,13 +735,13 @@
     const message = document.getElementById('InputMessage').value;
 
     // 3. Construction du message unique (WhatsApp ne prend qu'un paramètre "text")
-    const textContent = `*Nouveau message via DB Analytics Tools*\n\n` +
-                      `*Sujet :* ${subject}\n` +
-                      `*Message :* ${message}\n\n` +
+    const textContent = `*New message from ${window.location.hostname}*\n\n` +
+                      `*Subject :* ${subject}\n\n` +
+                      `${message}\n\n` +
                       `--- \n` +
-                      `*Contact :* ${firstName} ${lastName}\n` +
-                      `*Tél :* ${phone}\n` +
-                      `*Email :* ${email}`;
+                      `*Name :* ${firstName} ${lastName}\n` +
+                      `*Phone :* ${phone}\n` +
+                      `*Mail :* ${email}`;
 
     // 4. Encodage PROPRE pour URL
     const encodedText = encodeURIComponent(textContent);
