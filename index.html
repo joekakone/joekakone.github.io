@@ -565,7 +565,7 @@
         </div>
 
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-          <form onsubmit="buildWhatsappUrl(event)">
+          <form id="contactForm" onsubmit="buildWhatsappUrl(event)">
             <fieldset>
               <!-- <legend>Feel free to send me a message</legend> -->
               <h4 class="mb-3">Feel free to send me a message</h4>
@@ -673,6 +673,16 @@
     // Contact Mail
     function buildMailtoUrl(event) {
       event.preventDefault(); // Prevent form submission
+
+      // 1. On récupère le formulaire
+      const form = document.getElementById('contactForm'); 
+  
+      // 2. On force la validation HTML5
+      if (!form.checkValidity()) {
+          // Si le formulaire est invalide, on affiche les erreurs natives
+          form.reportValidity();
+          return; // On arrête tout ici
+      }
 
       var emailInputFirstName = document.getElementById('InputFirstName').value;
       var emailInputLastName = document.getElementById('InputLastName').value;
