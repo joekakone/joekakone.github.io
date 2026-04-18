@@ -686,7 +686,7 @@
   </script>
 
   <!-- Contact Form Utils -->
-  <script>
+  <!-- <script>
     function buildMailtoUrl(event) {
       event.preventDefault(); // Prevent form submission
 
@@ -702,9 +702,48 @@
       var subject = encodeURIComponent(emailInputSubject);
       var body = encodeURIComponent(emailContent);
 
-      var mailtoLink = 'mailto:konka.datanalytics@gmail.com' + '?subject=' + subject + '&body=' + body;
+      // var mailtoLink = 'mailto:konka.datanalytics@gmail.com' + '?subject=' + subject + '&body=' + body;
+      // window.location.href = mailtoLink;
 
-      window.location.href = mailtoLink;
+      var whatsappLink = 'https://web.whatsapp.com/send?phone=+22891518923&text=' + '?subject=' + subject + '&body=' + body;
+      window.location.href = whatsappLink;
+
+    }
+  </script> -->
+
+  <script>
+    function buildWhatsappUrl(event) {
+      event.preventDefault(); // Empêche le rechargement de la page
+
+      // Récupération des valeurs
+      var firstName = document.getElementById('InputFirstName').value;
+      var lastName = document.getElementById('InputLastName').value;
+      var email = document.getElementById('InputEmail').value;
+      var phone = document.getElementById('InputPhone').value;
+      var subject = document.getElementById('InputSubject').value;
+      var message = document.getElementById('InputMessage').value;
+
+      // Construction du message formaté pour WhatsApp
+      // On utilise des astérisques pour mettre en gras sur WhatsApp
+      var textContent = `*Sujet : ${subject}*\n\n` +
+                        `${message}\n\n` +
+                        `--- \n` +
+                        `*Nom :* ${firstName} ${lastName}\n` +
+                        `*Téléphone :* ${phone}\n` +
+                        `*Email :* ${email}`;
+
+      // Encodage du texte pour l'URL
+      var encodedText = encodeURIComponent(textContent);
+
+      // Numéro de téléphone au format international (sans le + pour l'API)
+      var phoneNumber = "22891518923"; 
+
+      // Construction du lien universel (wa.me) 
+      // Il détecte automatiquement s'il doit ouvrir l'appli mobile ou WhatsApp Web
+      var whatsappLink = 'https://wa.me/' + phoneNumber + '?text=' + encodedText;
+
+      // Ouverture dans un nouvel onglet pour ne pas perdre l'utilisateur sur ton site
+      window.open(whatsappLink, '_blank');
     }
   </script>
 
