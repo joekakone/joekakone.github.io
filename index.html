@@ -25,9 +25,10 @@
   <!-- Theme CSS -->
   <link rel="stylesheet" href="https://joekakone.github.io/static/css/style.blue.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="https://joekakone.github.io/static/css/custom.css">
+  <link rel="stylesheet" href="static/css/custom.css">
+  <!-- <link rel="stylesheet" href="https://joekakone.github.io/static/css/custom.css"> -->
   <!-- Favicon-->
   <link rel="shortcut icon" href="https://joekakone.github.io/static/img/favicon.png">
 </head>
@@ -71,12 +72,12 @@
           <!-- <h2 class="h4 fw-normal mb-5">Data Expert | Microsoft MVP | ITIL | PRINCE 2 | PMP</h2> -->
            <!-- Social Networks -->
           <ul class="list-inline mb-5">
-            <li class="list-inline-item"><a class="social-link" href="https://wa.me/+22891518923" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-            <li class="list-inline-item"><a class="social-link" href="https://github.com/joekakone" target="_blank"><i class="fab fa-github"></i></a></li>
-            <li class="list-inline-item"><a class="social-link" href="https://www.linkedin.com/in/joseph-koami-konka" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-            <li class="list-inline-item"><a class="social-link" href="https://web.facebook.com/joekakonepage" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-            <li class="list-inline-item"><a class="social-link" href="https://twitter.com/joekakone" target="_blank"><i class="fab fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a class="social-link" href="https://www.youtube.com/@algojungle" target="_blank"><i class="fab fa-youtube"></i></a></li>
+            <li class="list-inline-item"><a style="color:white;" class="social-link" href="https://wa.me/+22891518923" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+            <li class="list-inline-item"><a style="color:white;" class="social-link" href="https://github.com/joekakone" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li class="list-inline-item"><a style="color:white;" class="social-link" href="https://www.linkedin.com/in/joseph-koami-konka" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li class="list-inline-item"><a style="color:white;" class="social-link" href="https://web.facebook.com/joekakonepage" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a style="color:white;" class="social-link" href="https://twitter.com/joekakone" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a style="color:white;" class="social-link" href="https://www.youtube.com/@algojungle" target="_blank"><i class="fab fa-youtube"></i></a></li>
           </ul>
           <p class="text-shadow">Passionate about Data Transformation and Technology Innovation. Data Science Professional with +5 years experience as Data Scientist and Data Analyst. My expertises range from programming, data integration, data visualization to machine learning and operations with a focus on Python based-tools.</p>
           <p>
@@ -597,7 +598,19 @@
                   data-msg="Please write something for us" placeholder="Type your message here" required></textarea>
                 </div>
               </div>
-              <button class="btn btn-primary" type="submit">Send message</button>
+              <!-- <button class="btn btn-primary" type="submit">Send message</button> -->
+              <div class="row mt-3">
+                <div class="col-md-6 mb-2">
+                  <button class="btn btn-success w-100" type="submit">
+                    <i class="fab fa-whatsapp me-2"></i> Send via WhatsApp
+                  </button>
+                </div>
+                <div class="col-md-6">
+                  <button class="btn btn-primary w-100" type="button" onclick="buildMailtoUrl(event)">
+                    <i class="fas fa-envelope me-2"></i> Send via Email
+                  </button>
+                </div>
+              </div>
             </fieldset>
           </form>
         </div>
@@ -644,9 +657,6 @@
   <!-- JavaScript files-->
   <script src="https://joekakone.github.io/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="https://joekakone.github.io/static/js/front.js"></script>
-  <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9BXFEB6W8"></script>
@@ -658,40 +668,9 @@
     gtag('config', 'G-L9BXFEB6W8');
   </script>
 
-  <!-- Facebook -->
-  <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v20.0&appId=564181564271850"></script>
-
-  <!-- Messenger Plugin de discussion Code -->
-  <div id="fb-root"></div>
-
-  <!-- Your Plugin de discussion code -->
-  <div id="fb-customer-chat" class="fb-customerchat">
-  </div>
-
+  <!-- Contact Form Management -->
   <script>
-    var chatbox = document.getElementById('fb-customer-chat');
-    chatbox.setAttribute("page_id", "2130664133866857");
-    chatbox.setAttribute("attribution", "biz_inbox");
-
-    window.fbAsyncInit = function () {
-      FB.init({
-        xfbml: true,
-        version: 'v12.0'
-      });
-    };
-
-    (function (d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  </script>
-
-  <!-- Contact Form Utils -->
-  <!-- <script>
+    // Contact Mail
     function buildMailtoUrl(event) {
       event.preventDefault(); // Prevent form submission
 
@@ -707,48 +686,47 @@
       var subject = encodeURIComponent(emailInputSubject);
       var body = encodeURIComponent(emailContent);
 
-      // var mailtoLink = 'mailto:konka.datanalytics@gmail.com' + '?subject=' + subject + '&body=' + body;
-      // window.location.href = mailtoLink;
-
-      var whatsappLink = 'https://web.whatsapp.com/send?phone=+22891518923&text=' + '?subject=' + subject + '&body=' + body;
-      window.location.href = whatsappLink;
+      var mailtoLink = 'mailto:konka.datanalytics@gmail.com' + '?subject=' + subject + '&body=' + body;
+      
+      // Open mailbox with pre-filled content
+      console.log("Lien généré : ", mailtoLink); // Pour débugger dans la console (F12)
+      window.open(mailtoLink, '_blank');
 
     }
-  </script> -->
 
-<script>
-  function buildWhatsappUrl(event) {
-    // 1. On empêche le formulaire de rafraîchir la page
-    event.preventDefault(); 
+    // Contact Whatsapp
+    function buildWhatsappUrl(event) {
+      // 1. On empêche le formulaire de rafraîchir la page
+      event.preventDefault(); 
 
-    // 2. Récupération des données
-    const firstName = document.getElementById('InputFirstName').value;
-    const lastName = document.getElementById('InputLastName').value;
-    const email = document.getElementById('InputEmail').value;
-    const phone = document.getElementById('InputPhone').value;
-    const subject = document.getElementById('InputSubject').value;
-    const message = document.getElementById('InputMessage').value;
+      // 2. Récupération des données
+      const firstName = document.getElementById('InputFirstName').value;
+      const lastName = document.getElementById('InputLastName').value;
+      const email = document.getElementById('InputEmail').value;
+      const phone = document.getElementById('InputPhone').value;
+      const subject = document.getElementById('InputSubject').value;
+      const message = document.getElementById('InputMessage').value;
 
-    // 3. Construction du message unique (WhatsApp ne prend qu'un paramètre "text")
-    const textContent = `*New message from ${window.location.hostname}*\n\n` +
-                      `*Subject :* ${subject}\n\n` +
-                      `${message}\n\n` +
-                      `--- \n` +
-                      `*Name :* ${firstName} ${lastName}\n` +
-                      `*Phone :* ${phone}\n` +
-                      `*Mail :* ${email}`;
+      // 3. Construction du message unique (WhatsApp ne prend qu'un paramètre "text")
+      const textContent = `*New message from ${window.location.hostname}*\n\n` +
+                        `*Subject :* ${subject}\n\n` +
+                        `${message}\n\n` +
+                        `--- \n` +
+                        `*Name :* ${firstName} ${lastName}\n` +
+                        `*Phone :* ${phone}\n` +
+                        `*Mail :* ${email}`;
 
-    // 4. Encodage PROPRE pour URL
-    const encodedText = encodeURIComponent(textContent);
+      // 4. Encodage PROPRE pour URL
+      const encodedText = encodeURIComponent(textContent);
 
-    // 5. Lien universel wa.me (ton numéro sans le +)
-    const whatsappLink = `https://wa.me/22891518923?text=${encodedText}`;
+      // 5. Lien universel wa.me (ton numéro sans le +)
+      const whatsappLink = `https://wa.me/22891518923?text=${encodedText}`;
 
-    // 6. Action d'ouverture
-    console.log("Lien généré : ", whatsappLink); // Pour débugger dans la console (F12)
-    window.open(whatsappLink, '_blank');
-  }
-</script>
+      // 6. Action d'ouverture
+      console.log("Lien généré : ", whatsappLink); // Pour débugger dans la console (F12)
+      window.open(whatsappLink, '_blank');
+    }
+  </script>
 
   <!-- Google Ads -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2980760029476176"

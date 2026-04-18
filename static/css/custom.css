@@ -1,5 +1,13 @@
-/* your styles go here */
+/* ==========================================================================
+   CUSTOM STYLES - Joseph Konka Portfolio
+   ========================================================================== */
 
+/* --- 1. Global & Utility Styles --- */
+.cust-justify { 
+    text-align: justify; 
+}
+
+/* --- 2. Section: About --- */
 #about .img-thumb img {
     border: 8px solid #fff;
     box-shadow: 0 0 30px rgba(0,0,0,.2);
@@ -7,37 +15,13 @@
     height: auto;
 }
 
-.contact-item-s {
-    align-items: center;
-}
-
-.contact-item-logo {
-    width: 1cm;
-}
-
-.contact-item-logo i {
-    width: max-content;
-    margin: auto;
-}
-
-#contact a {
-    color: black;
-}
-
+/* --- 3. Section: Training --- */
 #training ul:hover {
     color: white;
 }
 
-.form-row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-5px;margin-left:-5px}
-
-.form-group{display:-ms-flexbox;display:flex;-ms-flex:0 0 auto;flex:0 0 auto;-ms-flex-flow:row wrap;flex-flow:row wrap;-ms-flex-align:center;align-items:center;margin-bottom:0}
-
-
-
-.cust-justify { text-align: justify; }
-
-/* --- Social Networks --- */
-.social-link {
+/* --- 4. Component: Social Networks --- */
+/*.social-link {
     width: 40px;
     height: 40px;
     display: flex;
@@ -54,4 +38,44 @@
     color: white !important;
     border-color: var(--aj-primary) !important;
     transform: translateY(-3px);
+}*/
+
+/* --- 5. Section: Contact & Forms --- */
+#contact a {
+    color: black;
+}
+
+.contact-item-s {
+    align-items: center;
+}
+
+.contact-item-logo {
+    width: 1cm;
+}
+
+.contact-item-logo i {
+    width: max-content;
+    margin: auto;
+}
+
+/* Form Layout (Bootstrap Overrides/Fixes) */
+.form-row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+}
+
+.form-group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 0;
 }
