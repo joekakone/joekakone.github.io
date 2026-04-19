@@ -33,59 +33,47 @@
   <link rel="shortcut icon" href="https://joekakone.github.io/static/img/favicon.png">
 
   <style>
-/* Container de flux */
-.data-flow-container {
+.comex-card {
+    background: #ffffff;
+    transition: all 0.3s ease;
     position: relative;
-    z-index: 1;
+    overflow: hidden;
 }
 
-/* La ligne qui relie les étapes */
-.flow-line {
-    position: absolute;
-    top: 35%;
-    left: 15%;
-    right: 15%;
-    height: 2px;
-    background: linear-gradient(to right, #0d6efd, #198754, #ffc107);
-    z-index: -1;
-    opacity: 0.3;
+.comex-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08) !important;
 }
 
-/* Cartes stylisées */
-.flow-card {
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(0,0,0,0.05);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.step-number {
+    font-size: 0.9rem;
+    font-weight: 800;
+    background: #f8f9fa;
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: #212529;
+    border: 1px solid #dee2e6;
 }
 
-.flow-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
-    border-color: rgba(13, 110, 253, 0.2);
+/* Ajustement pour éviter le débordement sur les petits écrans */
+.data-strategy-box .row {
+    margin-left: 0;
+    margin-right: 0;
 }
 
-/* Blobs d'icônes */
-.icon-blob {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-size: 2rem;
-    position: relative;
+/* Grayscale pour les logos de certifs pour un look plus corporate */
+.cert-logo {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
-.bg-primary-soft { background-color: #e7f0ff; }
-.bg-success-soft { background-color: #e8f5e9; }
-.bg-warning-soft { background-color: #fff8e1; }
-
-/* Effet de lueur au survol */
-.flow-card[data-step="1"]:hover .icon-blob { box-shadow: 0 0 20px rgba(13, 110, 253, 0.4); }
-.flow-card[data-step="2"]:hover .icon-blob { box-shadow: 0 0 20px rgba(25, 135, 84, 0.4); }
-.flow-card[data-step="3"]:hover .icon-blob { box-shadow: 0 0 20px rgba(255, 193, 7, 0.4); }
+.cert-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
   </style>
 </head>
 
@@ -160,38 +148,39 @@
       <p class="lead text-muted cust-justify m-0">Data represents a real opportunity for every organization across the world no matter the field or the size, it is the new oil. When well used, data provides actionable insights to organizations in order to make better decisions and maximize opportunities. Concretely, data helps organizations know what happened (Descriptive Analysis), understand why it happened (Explicative Analysis), predict what will happen (Predictive Analysis) and define what to do to achieve a goal (Prescriptive Analysis).</p>
 
       <!-- Data Monetization Flow -->
-      <div class="data-flow-container py-5">
-        <div class="row text-center g-4 position-relative">
+      <div class="data-strategy-box py-5">
+        <div class="row g-4 justify-content-center">
           
-          <div class="flow-line d-none d-lg-block"></div>
-
-          <div class="col-lg-4">
-            <div class="flow-card p-4 h-100 shadow rounded-4" data-step="1">
-              <div class="icon-blob bg-primary-soft mb-4">
-                <i class="fas fa-database text-primary"></i>
+          <div class="col-lg-4 col-md-6">
+            <div class="comex-card h-100 p-4 shadow-sm border-0 rounded-4" style="border-bottom: 4px solid #0d6efd !important;">
+              <div class="d-flex align-items-center mb-3">
+                <div class="step-number me-3">01</div>
+                <h3 class="h6 fw-bold text-uppercase mb-0">Centralize Data</h3>
               </div>
-              <h3 class="h5 fw-bold text-uppercase">1. Centralize</h3>
-              <p class="text-muted small">Gathering disparate sources into a single truth. <span class="d-block mt-2 font-monospace">(APIs, SQL, Cloud)</span></p>
+              <p class="text-muted small mb-2">Gather disparate sources and build a single source of truth to eliminate silos.</p>
+              <span class="badge bg-light text-primary border">Architecture & ETL</span>
             </div>
           </div>
 
-          <div class="col-lg-4">
-            <div class="flow-card p-4 h-100 shadow rounded-4" data-step="2">
-              <div class="icon-blob bg-success-soft mb-4">
-                <i class="fas fa-random text-success"></i>
+          <div class="col-lg-4 col-md-6">
+            <div class="comex-card h-100 p-4 shadow-sm border-0 rounded-4" style="border-bottom: 4px solid #198754 !important;">
+              <div class="d-flex align-items-center mb-3">
+                <div class="step-number me-3">02</div>
+                <h3 class="h6 fw-bold text-uppercase mb-0">Transform & Enrich</h3>
               </div>
-              <h3 class="h5 fw-bold text-uppercase">2. Transform & Enrich</h3>
-              <p class="text-muted small">Cleaning and feature engineering to make data reliable and "business-ready".</p>
+              <p class="text-muted small mb-2">Design specialized datamarts and reporting tables for reliable and business-ready data.</p>
+              <span class="badge bg-light text-success border">Modeling & Quality</span>
             </div>
           </div>
 
-          <div class="col-lg-4">
-            <div class="flow-card p-4 h-100 shadow rounded-4" data-step="3">
-              <div class="icon-blob bg-warning-soft mb-4">
-                <i class="fas fa-rocket text-warning"></i>
+          <div class="col-lg-4 col-md-6">
+            <div class="comex-card h-100 p-4 shadow-sm border-0 rounded-4" style="border-bottom: 4px solid #ffc107 !important;">
+              <div class="d-flex align-items-center mb-3">
+                <div class="step-number me-3">03</div>
+                <h3 class="h6 fw-bold text-uppercase mb-0">Get Insights</h3>
               </div>
-              <h3 class="h5 fw-bold text-uppercase">3. Get Insights</h3>
-              <p class="text-muted small">Creating dashboards and insights that drive smart, data-backed decisions.</p>
+              <p class="text-muted small mb-2">Create Dashboards and insights that drive smart, data-backed decisions and grow revenue.</p>
+              <span class="badge bg-light text-warning border">BI & ROI</span>
             </div>
           </div>
 
@@ -206,6 +195,8 @@
         <img src="https://images.credly.com/size/680x680/images/3c4602d8-832e-4a24-b42d-00359ce746f7/ITS-Badges_Python_1200px.png" width="110" height="110"/>
         <img src="https://images.credly.com/size/680x680/images/619f60f8-4f63-4772-910e-dc31c6f2f7e8/image.png" width="110" height="110"/>
         <img src="https://images.credly.com/size/680x680/images/5c8fca38-b0d2-49e5-9ad2-f3f8e79b327f/azure-data-scientist-associate-600x600.png" width="110" height="110"/>
+        <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Microsoft_MVP_banner.png" width="300" height="110"/> -->
+        <!-- <img src="https://developers.google.com/community/experts/images/gd_experts_lockup_horizontal_color.png" width="450" height="110"/> -->
       </p>
     </div>
   </section>
@@ -321,20 +312,6 @@
             </div>
           </div>
         </li>
-        <!-- Timeline item-->
-        <!-- <li class="timeline-item ms-3 pb-4">
-          <div class="timeline-arrow"></div>
-          <div class="row gx-0 gy-4">
-            <div class="col-lg-5">
-              <p class="fw-bold mb-2 text-primary text-sm">2013 - 2016 </p>
-              <h2 class="h5 mb-0 text-uppercase">Scientific Baccalaureate</h2>
-              <p class="text-sm mb-0">Lycée d'Agoè-Nyivé</p><span class="small text-muted">Lomé, TOGO</span>
-            </div>
-            <div class="col-lg-7">
-              <p class="text-muted">Obtained a scientific baccalaureate with GWA of 15.</p>
-            </div>
-          </div>
-        </li> -->
       </ul>
     </div>
   </section>
