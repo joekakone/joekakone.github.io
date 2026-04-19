@@ -31,6 +31,62 @@
   <link rel="stylesheet" href="https://joekakone.github.io/static/css/custom.css">
   <!-- Favicon-->
   <link rel="shortcut icon" href="https://joekakone.github.io/static/img/favicon.png">
+
+  <style>
+/* Container de flux */
+.data-flow-container {
+    position: relative;
+    z-index: 1;
+}
+
+/* La ligne qui relie les étapes */
+.flow-line {
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    right: 15%;
+    height: 2px;
+    background: linear-gradient(to right, #0d6efd, #198754, #ffc107);
+    z-index: -1;
+    opacity: 0.3;
+}
+
+/* Cartes stylisées */
+.flow-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.flow-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+    border-color: rgba(13, 110, 253, 0.2);
+}
+
+/* Blobs d'icônes */
+.icon-blob {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 2rem;
+    position: relative;
+}
+
+.bg-primary-soft { background-color: #e7f0ff; }
+.bg-success-soft { background-color: #e8f5e9; }
+.bg-warning-soft { background-color: #fff8e1; }
+
+/* Effet de lueur au survol */
+.flow-card[data-step="1"]:hover .icon-blob { box-shadow: 0 0 20px rgba(13, 110, 253, 0.4); }
+.flow-card[data-step="2"]:hover .icon-blob { box-shadow: 0 0 20px rgba(25, 135, 84, 0.4); }
+.flow-card[data-step="3"]:hover .icon-blob { box-shadow: 0 0 20px rgba(255, 193, 7, 0.4); }
+  </style>
 </head>
 
 <body class="scrollspy-example" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">
@@ -60,8 +116,6 @@
 
   <!-- Hero Section-->
   <section class="hero bg-cover bg-center py-5" id="hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://joekakone.github.io/static/img/shutterstock-cover.jpg'); background-size: cover; background-position: center; min-height: 100vh; display: flex; align-items: center;">
-    <!-- style="background: url(https://ncube-digest.com/wp-content/uploads/2020/02/shutterstock_1134885563-1.jpg)"> -->
-    <!-- style="background: url(https://joekakone.github.io/static/img/author-joseph-konka.jpg)"> -->
     <div class="container py-5 my-5 z-index-20 position-relative">
       <div class="row py-lg-5 mt-5">
         <div class="col-md-8 text-white">
@@ -103,26 +157,55 @@
         <p class="fw-bold text-primary text-uppercase letter-spacing-3">Data for Business</p>
         <h2 class="h3 lined text-uppercase">Delivery more value with data</h2>
       </header>
-      <p class="lead text-muted cust-justify">Data represents a real opportunity for every organization across the world no matter the field or the size, it is the new oil. When well used, data provides actionable insights to organizations in order to make better decisions and maximize opportunities. Concretely, data helps organizations know what happened (Descriptive Analysis), understand why it happened (Explicative Analysis), predict what will happen (Predictive Analysis) and define what to do to achieve a goal (Prescriptive Analysis).</p>
+      <p class="lead text-muted cust-justify m-0">Data represents a real opportunity for every organization across the world no matter the field or the size, it is the new oil. When well used, data provides actionable insights to organizations in order to make better decisions and maximize opportunities. Concretely, data helps organizations know what happened (Descriptive Analysis), understand why it happened (Explicative Analysis), predict what will happen (Predictive Analysis) and define what to do to achieve a goal (Prescriptive Analysis).</p>
+
+      <!-- Data Monetization Flow -->
+      <div class="data-flow-container py-5">
+        <div class="row text-center g-4 position-relative">
+          
+          <div class="flow-line d-none d-lg-block"></div>
+
+          <div class="col-lg-4">
+            <div class="flow-card p-4 h-100 shadow rounded-4" data-step="1">
+              <div class="icon-blob bg-primary-soft mb-4">
+                <i class="fas fa-database text-primary"></i>
+              </div>
+              <h3 class="h5 fw-bold text-uppercase">1. Centralize</h3>
+              <p class="text-muted small">Gathering disparate sources into a single truth. <span class="d-block mt-2 font-monospace">(APIs, SQL, Cloud)</span></p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="flow-card p-4 h-100 shadow rounded-4" data-step="2">
+              <div class="icon-blob bg-success-soft mb-4">
+                <i class="fas fa-random text-success"></i>
+              </div>
+              <h3 class="h5 fw-bold text-uppercase">2. Transform & Enrich</h3>
+              <p class="text-muted small">Cleaning and feature engineering to make data reliable and "business-ready".</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="flow-card p-4 h-100 shadow rounded-4" data-step="3">
+              <div class="icon-blob bg-warning-soft mb-4">
+                <i class="fas fa-rocket text-warning"></i>
+              </div>
+              <h3 class="h5 fw-bold text-uppercase">3. Get Insights</h3>
+              <p class="text-muted small">Creating dashboards and insights that drive smart, data-backed decisions.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
 
       <p class="text-muted cust-justify">87% of data science projects never make it to production (VentureBeat, 2019). The success of a data project relies on a good data strategy and and qualified data engineering team. We tend to recruit many Data Scientists and Data Analysts but few Data Engineers, resulting in data that are often unavailable and of poor quality, ultimately leading to the abandonment of data projects. As a Data Science Professional, my main mission is to help organizations define and implement a comprehensive data strategy.</p>
 
       <p class="text-muted mb-0 cust-justify">If you are looking for a Data Expert to help your organization in the Data Transformation process, I'm the person you need. Let's discuss our collaboration. I will help define your data strategy and implement your analytical project successfully.</p>
+      
       <p class="mt-5">
-        <!-- MVP -->
-        <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Microsoft_MVP_banner.png" width="250" height="110"/> -->
-        <!-- ITIL -->
-        <!-- <img src="https://images.credly.com/images/8b943c4b-c186-4e9f-84aa-004322b76eed/image.png" width="110" height="110"/> -->
-        <!-- PYTHON -->
         <img src="https://images.credly.com/size/680x680/images/3c4602d8-832e-4a24-b42d-00359ce746f7/ITS-Badges_Python_1200px.png" width="110" height="110"/>
         <img src="https://images.credly.com/size/680x680/images/619f60f8-4f63-4772-910e-dc31c6f2f7e8/image.png" width="110" height="110"/>
         <img src="https://images.credly.com/size/680x680/images/5c8fca38-b0d2-49e5-9ad2-f3f8e79b327f/azure-data-scientist-associate-600x600.png" width="110" height="110"/>
-        <!-- DP 203 -->
-        <!-- <img src="https://images.credly.com/images/61542181-0e8d-496c-a17c-3d4bf590eda1/twitter_thumb_201604_azure-data-engineer-associate-600x600.png" width="110" height="110"/> -->
-        <!-- TENSORFLOW -->
-        <!-- <img src="https://1.bp.blogspot.com/-gbwBTpsa2GA/XmmgEwFv5wI/AAAAAAAAC1U/k9UlGISLDjc_HwHtPfDcw1-W46M2LFt9wCLcBGAsYHQ/s1600/tf_badge_cert_tf_certified_developer.png" width="110" height="110"/> -->
-        <!-- STUDENT AMBASSADOR -->
-        <!-- <img src="https://mvp.microsoft.com/Assets/UserProfile/MSA/Badge/LevelBeta.png" width="120" height="110"/> -->
       </p>
     </div>
   </section>
@@ -406,9 +489,9 @@
             <li>Execute SQL queries (DDL/DCL/DML)</li>
             <li>Run ETL SQL Procedures</li>
             <li>Data Import & Export</li>
-            <li>Supports Postgres & SQL Server</li>
+            <li>Supports Postgres, Greenplum and SQL Server</li>
           </ul>
-          <p class="text-muted text-small pl-3">Project URL: <a href="https://pypi.org/project/db-analytics-tools/" target="_blank">https://pypi.org/project/db-analytics-tools/</a></p>
+          <p class="text-muted text-small pl-3">Project URL: <a href="https://joekakone.github.io/db-analytics-tools" target="_blank">https://joekakone.github.io/db-analytics-tools</a></p>
         </div>
         <div class="col-md-6 mb-5">
           <h3 class="h4">Jobs Tracker</h3>
