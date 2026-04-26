@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Joseph Konka - The Data Guy</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Joseph Konka">
+  <meta property="og:description" content="Joseph Konka - The Data Guy">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://joekakone.github.io">
+  <meta property="og:image" content="https://joekakone.github.io/static/img/cover.png">
+  <meta property="og:image:width" content="820">
+  <meta property="og:image:height" content="312">
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,800&display=swap">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="https://joekakone.github.io/static/css/style.blue.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Custom CSS -->
+  <!-- <link rel="stylesheet" href="static/css/custom.css"> -->
+  <link rel="stylesheet" href="https://joekakone.github.io/static/css/custom.css">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="https://joekakone.github.io/static/img/favicon.png">
+
+  <style>
+.comex-card {
+    background: #ffffff;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.comex-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08) !important;
+}
+
+.step-number {
+    font-size: 0.9rem;
+    font-weight: 800;
+    background: #f8f9fa;
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: #212529;
+    border: 1px solid #dee2e6;
+}
+
+/* Ajustement pour éviter le débordement sur les petits écrans */
+.data-strategy-box .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Grayscale pour les logos de certifs pour un look plus corporate */
+.cert-logo {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.cert-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+  </style>
+</head>
+
+<body class="scrollspy-example" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">
+  <!-- navbar-->
+  <header class="header">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="navbar">
+      <div class="container"><a class="navbar-brand" href="#"><img
+            src="https://joekakone.github.io/static/img/logo.svg" alt="" width="45"></a>
+        <button class="navbar-toggler navbar-toggler-end" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#expertise">Expertise</a></li>
+            <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#training">Training</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<section class="py-5 bg-white" id="shop">
+    <div class="container py-5">
+        <div class="row g-5">
+            
+            <div class="col-lg-6">
+                <div class="product-image-wrapper p-3 bg-light rounded-4 shadow-sm">
+                    <img src="https://joekakone.github.io/static/img/cover.png" alt="Data Strategy Guide" class="img-fluid rounded-3 shadow">
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="ps-lg-4">
+                    <nav aria-label="breadcrumb" class="mb-3">
+                        <ol class="breadcrumb small text-uppercase fw-bold">
+                            <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Boutique</a></li>
+                            <li class="breadcrumb-item active">Formation & E-books</li>
+                        </ol>
+                    </nav>
+
+                    <h1 class="h2 fw-bold mb-2">Guide Stratégique : L'Ingénierie des Données pour les Décideurs</h1>
+                    
+                    <div class="d-flex align-items-center mb-4">
+                        <span class="h3 fw-bold text-primary mb-0">15.000 FCFA</span>
+                        <span class="text-muted text-decoration-line-through ms-3 small">25.000 FCFA</span>
+                        <span class="badge bg-success ms-3">Promotion -40%</span>
+                    </div>
+
+                    <p class="text-muted mb-4">
+                        Apprenez à structurer votre stratégie Data pour éviter les 87% d'échecs en entreprise. Ce guide complet inclut les templates de design de Datamarts et les checklists de gouvernance.
+                    </p>
+
+                    <hr class="my-4">
+
+                    <form id="orderForm">
+                        <div class="mb-4">
+                            <label class="form-label fw-bold small text-uppercase">Choisir le Format</label>
+                            <select class="form-select border-2 p-3 rounded-3" id="productFormat" required>
+                                <option value="" selected disabled>Sélectionner une option</option>
+                                <option value="Digital PDF">E-book Digital (PDF)</option>
+                                <option value="Formation Video">Pack Vidéo + E-book</option>
+                                <option value="Consulting Coaching">Accompagnement 1h + Pack</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold small text-uppercase">Quantité</label>
+                            <input type="number" class="form-control border-2 p-3 rounded-3" value="1" min="1" id="productQty">
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-dark btn-lg py-3 rounded-3 fw-bold shadow" onclick="handlePurchase(event)">
+                                <i class="fas fa-shopping-cart me-2"></i> Acheter maintenant
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="mt-5 p-3 border rounded-3 bg-light">
+                        <h6 class="small fw-bold text-uppercase mb-3 text-muted">Détails de l'article</h6>
+                        <ul class="list-unstyled small mb-0">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Accès immédiat après paiement</li>
+                            <li class="mb-2"><i class="fas fa-file-pdf text-danger me-2"></i> Format PDF haute qualité (50 pages)</li>
+                            <li><i class="fas fa-certificate text-warning me-2"></i> Certificat AKONKA inclus</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+  <!-- Map Section -->
+  <section id="map" class="p-0">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7933.011344522181!2d1.2108104023672772!3d6.196815521342832!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x102159fcbc7d8155%3A0x226172642c3b06fe!2sSi%C3%A8ge%20Yas Togo!5e0!3m2!1sfr!2stg!4v1688418722802!5m2!1sfr!2stg"
+      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  <!-- Footer-->
+  <footer class="pt-5">
+    <div class="container text-center py-5">
+        <div class="row px-4">
+            <div class="col-lg-7 mx-auto">
+                <h2 class="text-uppercase mb-0">Joseph Konka </h2>
+                <h6 class="text-primary text-uppercase mb-0 letter-spacing-3">Senior Data Analyst | Data Scientist</h6>
+                <p class="text-muted my-4">Project Management - Data Engineering - Data Analytics - Python Programming</p>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"><a class="social-link" href="https://wa.me/+22891518923" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                    <li class="list-inline-item"><a class="social-link" href="https://github.com/joekakone" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li class="list-inline-item"><a class="social-link" href="https://www.linkedin.com/in/joseph-koami-konka" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li class="list-inline-item"><a class="social-link" href="https://web.facebook.com/joekakonepage" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="list-inline-item"><a class="social-link" href="https://twitter.com/joekakone" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a class="social-link" href="https://www.youtube.com/@algojungle" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyrights px-4">
+        <div class="container py-4 border-top text-center">
+        <p class="mb-0 text-muted py-2">&copy; All rights reserved. Template designed by <a
+            href="https://bootstrapious.com/p/bootstrap-resume">Bootstrapious</a>. </p>
+        </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript files-->
+  <script src="https://joekakone.github.io/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://joekakone.github.io/static/js/front.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9BXFEB6W8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-L9BXFEB6W8');
+  </script>
+
+  <!-- Contact Form Management -->
+  <script>
+    // Contact Mail
+    function buildMailtoUrl(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // 1. On récupère le formulaire
+      const form = document.getElementById('contactForm'); 
+  
+      // 2. On force la validation HTML5
+      if (!form.checkValidity()) {
+          // Si le formulaire est invalide, on affiche les erreurs natives
+          form.reportValidity();
+          return; // On arrête tout ici
+      }
+
+      var emailInputFirstName = document.getElementById('InputFirstName').value;
+      var emailInputLastName = document.getElementById('InputLastName').value;
+      var emailInputEmail = document.getElementById('InputEmail').value;
+      var emailInputPhone = document.getElementById('InputPhone').value;
+      var emailInputSubject = document.getElementById('InputSubject').value;
+      var emailInputMessage = document.getElementById('InputMessage').value;
+
+      var emailContent = `${emailInputMessage} \n\nFull Name : ${emailInputFirstName} ${emailInputLastName}\nPhone Number : ${emailInputPhone}\nEmail : ${emailInputEmail}`;
+
+      var subject = encodeURIComponent(emailInputSubject);
+      var body = encodeURIComponent(emailContent);
+
+      var mailtoLink = 'mailto:konka.datanalytics@gmail.com' + '?subject=' + subject + '&body=' + body;
+      
+      // Open mailbox with pre-filled content
+      console.log("Lien généré : ", mailtoLink); // Pour débugger dans la console (F12)
+      window.open(mailtoLink, '_blank');
+
+    }
+
+    // Contact Whatsapp
+    function buildWhatsappUrl(event) {
+      // 1. On empêche le formulaire de rafraîchir la page
+      event.preventDefault(); 
+
+      // 2. Récupération des données
+      const firstName = document.getElementById('InputFirstName').value;
+      const lastName = document.getElementById('InputLastName').value;
+      const email = document.getElementById('InputEmail').value;
+      const phone = document.getElementById('InputPhone').value;
+      const subject = document.getElementById('InputSubject').value;
+      const message = document.getElementById('InputMessage').value;
+
+      // 3. Construction du message unique (WhatsApp ne prend qu'un paramètre "text")
+      const textContent = `*New message from ${window.location.hostname}*\n\n` +
+                        `*Subject :* ${subject}\n\n` +
+                        `${message}\n\n` +
+                        `--- \n` +
+                        `*Name :* ${firstName} ${lastName}\n` +
+                        `*Phone :* ${phone}\n` +
+                        `*Mail :* ${email}`;
+
+      // 4. Encodage PROPRE pour URL
+      const encodedText = encodeURIComponent(textContent);
+
+      // 5. Lien universel wa.me (ton numéro sans le +)
+      const whatsappLink = `https://wa.me/22891518923?text=${encodedText}`;
+
+      // 6. Action d'ouverture
+      console.log("Lien généré : ", whatsappLink); // Pour débugger dans la console (F12)
+      window.open(whatsappLink, '_blank');
+    }
+  </script>
+
+<script>
+function handlePurchase(event) {
+    event.preventDefault();
+    const format = document.getElementById('productFormat').value;
+    const qty = document.getElementById('productQty').value;
+    
+    if(!format) {
+        alert("Veuillez choisir un format avant de continuer.");
+        return;
+    }
+
+    const message = `Bonjour Joseph ! Je souhaite commander :\n\n` +
+                    `📦 *Produit :* Guide Stratégique Data\n` +
+                    `🔹 *Format :* ${format}\n` +
+                    `🔢 *Quantité :* ${qty}\n\n` +
+                    `Merci de me donner les instructions pour le paiement (Flooz/T-Money).`;
+
+    const encodedText = encodeURIComponent(message);
+    window.open(`https://wa.me/22891518923?text=${encodedText}`, '_blank');
+}
+</script>
+
+  <!-- Google Ads -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2980760029476176"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
