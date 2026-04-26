@@ -33,47 +33,108 @@
   <link rel="shortcut icon" href="https://joekakone.github.io/static/img/favicon.png">
 
   <style>
-.comex-card {
-    background: #ffffff;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
+    .comex-card {
+        background: #ffffff;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
 
-.comex-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.08) !important;
-}
+    .comex-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.08) !important;
+    }
 
-.step-number {
-    font-size: 0.9rem;
-    font-weight: 800;
-    background: #f8f9fa;
-    padding: 5px 10px;
-    border-radius: 6px;
-    color: #212529;
-    border: 1px solid #dee2e6;
-}
+    .step-number {
+        font-size: 0.9rem;
+        font-weight: 800;
+        background: #f8f9fa;
+        padding: 5px 10px;
+        border-radius: 6px;
+        color: #212529;
+        border: 1px solid #dee2e6;
+    }
 
-/* Ajustement pour éviter le débordement sur les petits écrans */
-.data-strategy-box .row {
-    margin-left: 0;
-    margin-right: 0;
-}
+    /* Ajustement pour éviter le débordement sur les petits écrans */
+    .data-strategy-box .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
 
-/* Grayscale pour les logos de certifs pour un look plus corporate */
-.cert-logo {
-    filter: grayscale(100%);
-    opacity: 0.7;
-    transition: all 0.3s ease;
-    margin-right: 20px;
-    margin-bottom: 20px;
-}
+    /* Grayscale pour les logos de certifs pour un look plus corporate */
+    .cert-logo {
+        filter: grayscale(100%);
+        opacity: 0.7;
+        transition: all 0.3s ease;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
 
-.cert-logo:hover {
-    filter: grayscale(0%);
-    opacity: 1;
-}
+    .cert-logo:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+    }
+    /* ************************************************** */
+    /* Styles personnalisés pour l'alignement des icônes à gauche */
+    .expertise-icon {
+      width: 90px;
+      height: 90px;
+      min-width: 90px; /* Force la largeur pour l'icône */
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      border-radius: 12px;
+      background-color: #ffffff;
+    }
+
+    /* Effet au survol */
+    .expertise-icon:hover {
+      transform: translateY(-5px);
+      background-color: #007bff !important;
+    }
+
+    .expertise-icon:hover i {
+      color: #ffffff !important;
+    }
+
+    /* Ajustements généraux du template */
+    .letter-spacing-3 {
+      letter-spacing: 0.3rem;
+    }
+    
+    .lined::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 2px;
+      background: #007bff;
+      margin-top: 10px;
+    }
+
+    /* Justification personnalisée du texte */
+    .cust-justify {
+      text-align: justify;
+    }
+
+    /* Media queries pour mobile */
+    @media (max-width: 576px) {
+      .expertise-icon {
+        width: 70px;
+        height: 70px;
+        min-width: 70px;
+      }
+      .expertise-icon i {
+        font-size: 2rem !important;
+      }
+      .flex-mobile-column {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+      }
+      .text-container-mobile {
+        margin-top: 15px;
+      }
+    }
   </style>
 </head>
 
@@ -190,14 +251,6 @@
       <p class="text-muted cust-justify">87% of data science projects never make it to production (VentureBeat, 2019). The success of a data project relies on a good data strategy and and qualified data engineering team. We tend to recruit many Data Scientists and Data Analysts but few Data Engineers, resulting in data that are often unavailable and of poor quality, ultimately leading to the abandonment of data projects. As a Data Science Professional, my main mission is to help organizations define and implement a comprehensive data strategy.</p>
 
       <p class="text-muted mb-0 cust-justify">If you are looking for a Data Expert to help your organization in the Data Transformation process, I'm the person you need. Let's discuss our collaboration. I will help define your data strategy and implement your analytical project successfully.</p>
-      
-      <p class="mt-5">
-        <img src="https://images.credly.com/size/680x680/images/3c4602d8-832e-4a24-b42d-00359ce746f7/ITS-Badges_Python_1200px.png" width="110" height="110"/>
-        <img src="https://images.credly.com/size/680x680/images/619f60f8-4f63-4772-910e-dc31c6f2f7e8/image.png" width="110" height="110"/>
-        <img src="https://images.credly.com/size/680x680/images/5c8fca38-b0d2-49e5-9ad2-f3f8e79b327f/azure-data-scientist-associate-600x600.png" width="110" height="110"/>
-        <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Microsoft_MVP_banner.png" width="300" height="110"/> -->
-        <!-- <img src="https://developers.google.com/community/experts/images/gd_experts_lockup_horizontal_color.png" width="450" height="110"/> -->
-      </p>
     </div>
   </section>
 
@@ -215,51 +268,133 @@
             <!-- <img src="img/about-joseph-konka.png"> -->
           </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-          <p class="text-dark cust-justify">I'm Joseph Konka, a passionate data science professional from Togo. I am currently working as Customer Analytics Supervisor at Yas Togo in Lomé.</p>
-
-          <p class="text-muted cust-justify">I have a background in mathematics. I started my data science journey trough Africa Tech Up Tour Bootcamp in 2019, I learnt about Python, Data Science, Machine Learning, Git, Docker. I also learn online on my free time developing strong skills. I am currently doing an Executive Master in Artificial Intelligence & Data Analytics at HEC Maroc.</p>
-
-          <p class="text-muted cust-justify">Since my beginings at Rintio, I've worked on various subjects and I develop several data skills my data carera in November 2019 as Trainee Data Scientist at RINTIO. During over two years, I've mainly working on deep learning using Python frameworks. After over three years, I consider myself as a polyvalent Data Analyst and Data Scientist.</p>
-          
-          <p class="text-muted cust-justify">On the other hand, I actively share Python and Data Science content through <a href="learning/index.html" target="_blank"><span class="font-weight-bold">Algo Jungle</span></a>. It is my way of contributing to the community and sharing knowledge in my areas of expertise.</p>
-          
-          <p class="text-muted cust-justify">My life is not only Python and Data. I also spend my time in playing games, reading or watching movies and football matches.</p>
-          
-          <p class="text-muted"><br>Kind reagards !<br><span class="text-dark">Joseph Konka</span></p>
+        <div class="col-lg-6 col-md-12">
+          <!-- Professional Title -->
+          <h3 class="h4 fw-bold text-dark mb-3">Data Analytics Lead | BI & Data Strategy</h3>
+        
+          <!-- Value Proposition -->
+          <p class="lead text-primary fw-bold mb-4">
+            Driving organizational growth through rigorous data strategy
+          </p>
+        
+          <!-- Professional Summary -->
+          <p class="text-dark cust-justify mb-3">
+            I'm Joseph Konka, a passionate data professional from Togo. I am currently working as <strong>Customer Analytics Supervisor</strong> 
+            at <strong>Yas Togo</strong> in Lomé. I bring over 7 years experience and over 4 years in Telecoms.
+            My expertises range  specializing in data engineering, data analytics and machine learning with a focus on Python based-tools. 
+            Since my beginings at Rintio, I've worked on various projects and I've developed solid skills.
+          </p>
+        
+          <!-- Leadership & Academic Standing -->
+          <p class="text-muted cust-justify mb-3">
+            I have a <strong>Bachelor's in Mathematics</strong> at University of Lomé and an <strong>Executive Master in AI & Data Analytics</strong> at HEC Maroc. 
+            I buit my expertise on the ground learning from my senior colleagues. I also hold some certifications such as <strong>Power BI Data Analyst</strong>, <strong>Azure Data Scientist</strong> and <strong>IT Specialist Python</strong>.
+          </p>
+        
+          <!-- Ecosystem & Vision -->
+          <p class="text-muted cust-justify mb-4">
+            Beyond my corporate responsibilities, I am dedicated to data evangelism through <strong>Algo Jungle</strong>, 
+            sharing specialized knowledge and field experiences across my website and YouTube channel. 
+            I develop <strong>DB Analytics Tools</strong> a Python package engineered to empower data professionals 
+            by streamlining complex workflows and optimizing interactions with relational data warehouses.
+          </p>
+        
+          <!-- Executive Sign-off -->
+          <div class="pt-3 border-top">
+            <p class="text-dark fw-bold mb-0">Joseph Konka</p>
+            <p class="text-primary small text-uppercase letter-spacing-2">Senior Data Analyst | Data Scientist</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Expertise Section        -->
-  <section class="py-5 bg-light" id="expertise">
+  <!-- Section Expertise -->
+  <section class="py-5" id="expertise">
     <div class="container py-5">
       <header class="mb-5 pb-4">
         <p class="fw-bold text-primary text-uppercase letter-spacing-3">Batman would be jealous.</p>
         <h2 class="text-uppercase lined">Expertise</h2>
       </header>
+
       <div class="row gy-5 pb-5">
+
+        <!-- 01 Project Management -->
         <div class="col-md-6">
-          <h3 class="h4"><span class="text-primary me-2">01</span>Project Management</h3>
-          <p class="text-muted text-sm cust-justify">I lead data projects from start to finish, ensuring timely delivery and alignment with objectives. With a focus on agile methodologies, I prioritize clear communication, resource optimization, and adaptability. My experience in managing data teams and coordinating complex workflows guarantees successful execution, delivering maximum value and ensuring the project meets the organization’s goals.</p>
+          <div class="d-flex align-items-center flex-mobile-column">
+            <!-- Icône : largeur fixe sans colonne Bootstrap -->
+            <div class="expertise-icon shadow-sm border me-4">
+              <i class="fas fa-tasks fa-3x text-primary"></i>
+            </div>
+            <!-- Contenu : prend le reste de la place sans espace blanc forcé -->
+            <div class="text-container-mobile">
+              <h3 class="h4"><span class="text-primary me-2">01</span>Project Management</h3>
+              <p class="text-muted text-sm cust-justify mb-0">
+                I lead end-to-end data projects using Agile methodologies. My focus is on aligning technical execution with business goals, optimizing resource allocation, and ensuring high-value delivery.
+              </p>
+            </div>
+          </div>
         </div>
+
+        <!-- 02 Data Engineering -->
         <div class="col-md-6">
-          <h3 class="h4"><span class="text-primary me-2">02</span>Data Engineering</h3>
-          <p class="text-muted text-sm cust-justify">Data Engineering represent 80% of the data process. It is a crucial skill for the success of data science project. I have expertise in seamlessly merging data from various sources, ensuring data quality and consistency. By leveraging different integration techniques and tools, I can efficiently combine structured and unstructured data, enabling a holistic view of the data landscape.</p>
+          <div class="d-flex align-items-center flex-mobile-column">
+            <div class="expertise-icon shadow-sm border me-4">
+              <i class="fas fa-database fa-3x text-primary"></i>
+            </div>
+            <div class="text-container-mobile">
+              <h3 class="h4"><span class="text-primary me-2">02</span>Data Engineering</h3>
+              <p class="text-muted text-sm cust-justify mb-0">
+                The backbone of any data strategy. I specialize in building robust ETL/ELT pipelines, architecting scalable data warehouses, and ensuring data quality across disparate sources.
+              </p>
+            </div>
+          </div>
         </div>
+
+        <!-- 03 Data Analytics -->
         <div class="col-md-6">
-          <h3 class="h4"><span class="text-primary me-2">03</span>Data Analytics</h3>
-          <p class="text-muted text-sm cust-justify">Data analysis is at the core of my skill set. With a deep understanding of statistical methods and data visualization techniques, I can uncover valuable insights from complex datasets. By applying exploratory and inferential analysis, I derive meaningful conclusions and make data-driven recommendations, empowering businesses to make informed decisions.</p>
+          <div class="d-flex align-items-center flex-mobile-column">
+            <div class="expertise-icon shadow-sm border me-4">
+              <i class="fas fa-chart-line fa-3x text-primary"></i>
+            </div>
+            <div class="text-container-mobile">
+              <h3 class="h4"><span class="text-primary me-2">03</span>Data Analytics</h3>
+              <p class="text-muted text-sm cust-justify mb-0">
+                I transform raw data into strategic insights. Using advanced statistical methods and storytelling through visualization, I empower decision-makers with actionable recommendations.
+              </p>
+            </div>
+          </div>
         </div>
+
+        <!-- 04 Backend Python -->
         <div class="col-md-6">
-          <h3 class="h4"><span class="text-primary me-2">04</span>Backend Python</h3>
-          <p class="text-muted text-sm cust-justify">Machine learning is a key component of modern data science. With expertise in machine learning algorithms and techniques, I can build predictive models and develop intelligent systems that learn from data. By leveraging machine learning, I unlock the potential to automate processes, detect patterns, and make accurate predictions, driving actionable insights.</p>
+          <div class="d-flex align-items-center flex-mobile-column">
+            <div class="expertise-icon shadow-sm border me-4">
+              <i class="fab fa-python fa-3x text-primary"></i>
+            </div>
+            <div class="text-container-mobile">
+              <h3 class="h4"><span class="text-primary me-2">04</span>Backend Python</h3>
+              <p class="text-muted text-sm cust-justify mb-0">
+                Leveraging Python to build intelligent systems. I develop predictive models, automate complex workflows, and engineer custom tools to solve unique technical challenges.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Algo Jungle -->
-      <p class="">Ready to unlock the full potential of your data? Let’s collaborate to transform it into actionable insights that drive growth and innovation. Feel free to reach out, and let's discuss how I can help elevate your data project. Book a consultation with me today and take your data strategy to the next level! <a href="https://algojungle.github.io/" target="_blank">Click here 👇🏽</a></p>
+      <p class="">
+        Ready to unlock the full potential of your data? Let’s collaborate to transform it into actionable insights that drive growth and innovation. Feel free to reach out, and let's discuss how I can help elevate your data project. Book a consultation with me today and take your data strategy to the next level! <a href="https://algojungle.github.io/" target="_blank">Click here 👇🏽</a>
+      </p>
+    </div>
+  </section>
+  
+  <!-- CTA -->
+  <section class="py-5 bg-primary text-white text-center">
+    <div class="container py-4">
+      <h2 class="text-uppercase mb-4">Ready to unlock the value of your data ?</h2>
+      <p class="lead mb-5">Let's transform your data into strategic decision-making tools together.</p>
+      <a href="#contact" class="btn btn-outline-light btn-lg text-uppercase px-5">Contact me</a>
     </div>
   </section>
 
@@ -504,28 +639,6 @@
         <h2 class="text-uppercase lined">Training</h2>
       </header>
       <div class="row pb-4">
-        <!-- Become Python Developer -->
-        <!-- <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 pb-3">
-          <a class="px-3 py-3 contact-item shadow-sm reset-anchor d-block" href="https://wa.me/+22891518923" target="_blank">
-            <h4 class="contact-item-title px-3">Become Python Developer</h4>
-            <p class="text-small px-3">3 Months | Online | 90.000 XOF | 5 places</p>
-
-            <ul class="py-2">
-              <li><p class="#">Python Basics & Data Structures</p></li>
-              <li><p class="#">Functions, Modules and Packages</p></li>
-              <li><p class="#">Oriented Object Programming</p></li>
-              <li><p class="#">Unittests with Python</p></li>
-              <li><p class="#">Web development with Flask</p></li>
-              <li><p class="#">Deployment with Docker</p></li>
-              <li><p class="#">Version Control with Git and GitHub</p></li>
-            </ul>
-
-            <div class="text-center pb-4">
-              <button class="btn btn- sm btn-secondary" type="button">Reserve now</button>
-            </div>
-          </a>
-        </div> -->
-
         <!-- Become Data Engineer -->
         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 pb-3">
           <a class="px-3 py-3 contact-item shadow-sm reset-anchor d-block" href="https://wa.me/+22891518923" target="_blank">
@@ -536,8 +649,8 @@
               <li><p class="#">SQL for Data Engineering</p></li>
               <li><p class="#">Data Integration with Talend</p></li>
               <li><p class="#">Python Packages for Data Science</p></li>
-              <li><p class="#">Pipelines Orchestration with Apache Airflow</p></li>
-              <li><p class="#">Data Processing with Apache Spark</p></li>
+              <li><p class="#">Pipelines Orchestration with Airflow</p></li>
+              <li><p class="#">Data Processing with Spark</p></li>
               <li><p class="#">Data Visualization with Power BI</p></li>
               <li><p class="#">Web Scraping with Python</p></li>
             </ul>
@@ -579,7 +692,7 @@
             <ul class="py-2">
               <li><p class="#">Python Packages for Data Science</p></li>
               <li><p class="#">Fundamentals of Machine Learning</p></li>
-              <li><p class="#">Data Processing with Apache Spark</p></li>
+              <li><p class="#">Data Processing with Spark</p></li>
               <li><p class="#">Machine Learning with Scikit-learn</p></li>
               <li><p class="#">Deep Learning with TensorFlow</p></li>
               <li><p class="#">Data Visualization with Power BI</p></li>

@@ -102,83 +102,62 @@
     </nav>
   </header>
 
-<section class="py-5 bg-white" id="shop">
-    <div class="container py-5">
-        <div class="row g-5">
-            
-            <div class="col-lg-6">
-                <div class="product-image-wrapper p-3 bg-light rounded-4 shadow-sm">
-                    <img src="https://joekakone.github.io/static/img/cover.png" alt="Data Strategy Guide" class="img-fluid rounded-3 shadow">
-                </div>
-            </div>
-
-            <div class="col-lg-6">
-                <div class="ps-lg-4">
-                    <nav aria-label="breadcrumb" class="mb-3">
-                        <ol class="breadcrumb small text-uppercase fw-bold">
-                            <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Boutique</a></li>
-                            <li class="breadcrumb-item active">Formation & E-books</li>
-                        </ol>
-                    </nav>
-
-                    <h1 class="h2 fw-bold mb-2">Guide Stratégique : L'Ingénierie des Données pour les Décideurs</h1>
-                    
-                    <div class="d-flex align-items-center mb-4">
-                        <span class="h3 fw-bold text-primary mb-0">15.000 FCFA</span>
-                        <span class="text-muted text-decoration-line-through ms-3 small">25.000 FCFA</span>
-                        <span class="badge bg-success ms-3">Promotion -40%</span>
-                    </div>
-
-                    <p class="text-muted mb-4">
-                        Apprenez à structurer votre stratégie Data pour éviter les 87% d'échecs en entreprise. Ce guide complet inclut les templates de design de Datamarts et les checklists de gouvernance.
-                    </p>
-
-                    <hr class="my-4">
-
-                    <form id="orderForm">
-                        <div class="mb-4">
-                            <label class="form-label fw-bold small text-uppercase">Choisir le Format</label>
-                            <select class="form-select border-2 p-3 rounded-3" id="productFormat" required>
-                                <option value="" selected disabled>Sélectionner une option</option>
-                                <option value="Digital PDF">E-book Digital (PDF)</option>
-                                <option value="Formation Video">Pack Vidéo + E-book</option>
-                                <option value="Consulting Coaching">Accompagnement 1h + Pack</option>
-                            </select>
-                        </div>
-
-                        <div class="mb-4">
-                            <label class="form-label fw-bold small text-uppercase">Quantité</label>
-                            <input type="number" class="form-control border-2 p-3 rounded-3" value="1" min="1" id="productQty">
-                        </div>
-
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-dark btn-lg py-3 rounded-3 fw-bold shadow" onclick="handlePurchase(event)">
-                                <i class="fas fa-shopping-cart me-2"></i> Acheter maintenant
-                            </button>
-                        </div>
-                    </form>
-
-                    <div class="mt-5 p-3 border rounded-3 bg-light">
-                        <h6 class="small fw-bold text-uppercase mb-3 text-muted">Détails de l'article</h6>
-                        <ul class="list-unstyled small mb-0">
-                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Accès immédiat après paiement</li>
-                            <li class="mb-2"><i class="fas fa-file-pdf text-danger me-2"></i> Format PDF haute qualité (50 pages)</li>
-                            <li><i class="fas fa-certificate text-warning me-2"></i> Certificat AKONKA inclus</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
+  <section class="py-5 bg-light" id="shop">
+    <div class="container pt-5 my-5">
+      <div class="row g-5">
+  
+        <div class="col-lg-6">
+          <div class="product-image-wrapper p-3 bg-light rounded-4 shadow-sm">
+            <img src="https://i.etsystatic.com/26453672/r/il/d8e93f/3343859017/il_794xN.3343859017_it0r.jpg" alt="Data Strategy Guide"
+              class="img-fluid rounded-3 shadow" height="480">
+          </div>
         </div>
+  
+        <div class="col-lg-6 p-3">
+          <div class="ps-lg-4">
+  
+            <h1 class="h3 fw-bold mb-2">Cadre Photo - Citation de John C Maxwell</h1>
+  
+            <div class="d-flex align-items-center mb-4">
+              <span class="h3 fw-bold text-primary mb-0">2.500 FCFA</span>
+              <span class="text-muted text-decoration-line-through ms-3 small">5.000 FCFA</span>
+              <span class="badge bg-success ms-3">Promotion -50%</span>
+            </div>
+  
+            <p class="text-muted mb-4">
+              Ajouter une touche d'authenticité dans votre espace de travail avec nos cadres photo. Idéal pour décorer votre bureau ou votre maison pour vous-même ou pour offrir à un proche passionné de data. Chaque cadre est soigneusement conçu pour inspirer et motiver.
+            </p>
+  
+            <hr class="my-4">
+  
+            <form id="orderForm">
+              <div class="mb-4">
+                <label class="form-label fw-bold small text-uppercase">Choisir le Format</label>
+                <select class="form-select border-2 p-3 rounded-3" id="productFormat" required>
+                  <option value="" selected disabled>Sélectionner une option</option>
+                  <option value="Digital PDF">E-book Digital (PDF)</option>
+                  <option value="Formation Video">Pack Vidéo + E-book</option>
+                  <option value="Consulting Coaching">Accompagnement 1h + Pack</option>
+                </select>
+              </div>
+  
+              <div class="mb-4">
+                <label class="form-label fw-bold small text-uppercase">Quantité</label>
+                <input type="number" class="form-control border-2 p-3 rounded-3" value="1" min="1" id="productQty">
+              </div>
+  
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-dark btn-lg py-3 rounded-3 fw-bold shadow"
+                  onclick="handlePurchase(event)">
+                  <i class="fas fa-shopping-cart me-2"></i> Acheter maintenant
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+  
+      </div>
     </div>
-</section>
-
-  <!-- Map Section -->
-  <section id="map" class="p-0">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7933.011344522181!2d1.2108104023672772!3d6.196815521342832!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x102159fcbc7d8155%3A0x226172642c3b06fe!2sSi%C3%A8ge%20Yas Togo!5e0!3m2!1sfr!2stg!4v1688418722802!5m2!1sfr!2stg"
-      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
   </section>
 
   <!-- Footer-->
