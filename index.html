@@ -29,112 +29,11 @@
   <!-- Custom CSS -->
   <!-- <link rel="stylesheet" href="static/css/custom.css"> -->
   <link rel="stylesheet" href="https://joekakone.github.io/static/css/custom.css">
+  <link rel="stylesheet" href="./static/css/custom.css">
   <!-- Favicon-->
   <link rel="shortcut icon" href="https://joekakone.github.io/static/img/favicon.png">
 
   <style>
-    .comex-card {
-        background: #ffffff;
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .comex-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(0,0,0,0.08) !important;
-    }
-
-    .step-number {
-        font-size: 0.9rem;
-        font-weight: 800;
-        background: #f8f9fa;
-        padding: 5px 10px;
-        border-radius: 6px;
-        color: #212529;
-        border: 1px solid #dee2e6;
-    }
-
-    /* Ajustement pour éviter le débordement sur les petits écrans */
-    .data-strategy-box .row {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    /* Grayscale pour les logos de certifs pour un look plus corporate */
-    .cert-logo {
-        filter: grayscale(100%);
-        opacity: 0.7;
-        transition: all 0.3s ease;
-        margin-right: 20px;
-        margin-bottom: 20px;
-    }
-
-    .cert-logo:hover {
-        filter: grayscale(0%);
-        opacity: 1;
-    }
-    /* ************************************************** */
-    /* Styles personnalisés pour l'alignement des icônes à gauche */
-    .expertise-icon {
-      width: 90px;
-      height: 90px;
-      min-width: 90px; /* Force la largeur pour l'icône */
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-      border-radius: 12px;
-      background-color: #ffffff;
-    }
-
-    /* Effet au survol */
-    .expertise-icon:hover {
-      transform: translateY(-5px);
-      background-color: #007bff !important;
-    }
-
-    .expertise-icon:hover i {
-      color: #ffffff !important;
-    }
-
-    /* Ajustements généraux du template */
-    .letter-spacing-3 {
-      letter-spacing: 0.3rem;
-    }
-    
-    .lined::after {
-      content: '';
-      display: block;
-      width: 50px;
-      height: 2px;
-      background: #007bff;
-      margin-top: 10px;
-    }
-
-    /* Justification personnalisée du texte */
-    .cust-justify {
-      text-align: justify;
-    }
-
-    /* Media queries pour mobile */
-    @media (max-width: 576px) {
-      .expertise-icon {
-        width: 70px;
-        height: 70px;
-        min-width: 70px;
-      }
-      .expertise-icon i {
-        font-size: 2rem !important;
-      }
-      .flex-mobile-column {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-      }
-      .text-container-mobile {
-        margin-top: 15px;
-      }
-    }
   </style>
 </head>
 
@@ -149,14 +48,13 @@
           aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#hero">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
             <li class="nav-item"><a class="nav-link" href="#expertise">Expertise</a></li>
-            <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-            <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="#training">Training</a></li>
-            <li class="nav-item"><a class="nav-link" href="/learning">Learning</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experience">Expérience</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+            <li class="nav-item"><a class="nav-link" href="#training">Mentoring</a></li>
+            <li class="nav-item"><a class="nav-link" href="/learning">E-Learning</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -169,7 +67,7 @@
     <div class="container py-5 my-5 z-index-20 position-relative">
       <div class="row py-lg-5 mt-5">
         <div class="col-md-8 text-white">
-          <h2 class="h4 text-primary fw-normal mb-0">Hi, I am</h2>
+          <h2 class="h4 text-primary fw-normal mb-0">Bonjour, je suis</h2>
           <h1 class="text-uppercase text-xl mb-0">Joseph <span class="text-primary">Konka</span></h1>
           <h2 class="h4 fw-normal">Data Analytics Lead | BI & Data Strategy</h2>
           <!-- Social Networks -->
@@ -181,18 +79,18 @@
             <li class="list-inline-item"><a style="color:white;" class="social-link" href="https://twitter.com/joekakone" target="_blank"><i class="fab fa-twitter"></i></a></li>
             <li class="list-inline-item"><a style="color:white;" class="social-link" href="https://www.youtube.com/@algojungle" target="_blank"><i class="fab fa-youtube"></i></a></li>
           </ul>
-          <p class="text-shadow">Passionate about Data Transformation and Technology Innovation. Data Science Professional with +5 years experience as Data Scientist and Data Analyst. My expertises range from programming, data integration, data visualization to machine learning and operations with a focus on Python based-tools.</p>
+          <p class="text-shadow">Passionné par la Transformation Data et l'Innovation Technologique. Professionnel Data avec plus de 7 ans d'expérience en tant que Data Scientist and Data Analyst et 4 ans dans les Télécoms. My expertises range from programming, data integration, data visualization to machine learning and operations with a focus on Python based-tools.</p>
           <p class="d-flex flex-column flex-md-row align-items-center">
             <a href="https://joekakone.github.io/static/doc/Resume_202508_JOSEPH_KONKA.pdf" 
                target="_blank" 
                class="mb-3 mb-md-0 me-md-3 w-100 w-md-auto text-center">
-              <button class="btn btn-primary text-uppercase w-100" type="button">Download Resume</button>
+              <button class="btn btn-primary text-uppercase w-100" type="button">Mon CV complet</button>
             </a>
             
             <a href="https://calendar.app.google/rHknzyXL2jiiHNV9A" 
                target="_blank" 
                class="w-100 w-md-auto text-center">
-              <button class="btn btn-secondary text-uppercase w-100" type="button">Schedule a call</button>
+              <button class="btn btn-secondary text-uppercase w-100" type="button">Réserver un appel</button>
             </a>
           </p>
         </div>
@@ -201,13 +99,13 @@
   </section>
 
   <!-- Intro Section -->
-  <section class="py-5 bg-light" id="#intro">
+  <section class="bg-light py-5" id="#intro">
     <div class="container py-5">
       <header class="mb-5">
         <p class="fw-bold text-primary text-uppercase letter-spacing-3">Data for Business</p>
-        <h2 class="h3 lined text-uppercase">Delivery more value with data</h2>
+        <h2 class="h3 lined text-uppercase">Apportez plus de valeur grâce aux données</h2>
       </header>
-      <p class="lead text-muted cust-justify m-0">Data represents a real opportunity for every organization across the world no matter the field or the size, it is the new oil. When well used, data provides actionable insights to organizations in order to make better decisions and maximize opportunities. Concretely, data helps organizations know what happened (Descriptive Analysis), understand why it happened (Explicative Analysis), predict what will happen (Predictive Analysis) and define what to do to achieve a goal (Prescriptive Analysis).</p>
+      <p class="lead text-muted cust-justify m-0">Les données représentent une véritable opportunité pour toutes les organisations du monde entier, quels que soient leur secteur d'activité et leur taille ; elles sont le nouvel or noir. Bien exploitées, les données fournissent aux organisations des informations exploitables leur permettant de prendre de meilleures décisions et de maximiser leurs opportunités. Concrètement, les données aident les organisations à savoir ce qui s'est passé (analyse descriptive), à comprendre pourquoi cela s'est produit (analyse explicative), à prédire ce qui se passera (analyse prédictive) et à définir les actions à entreprendre pour atteindre un objectif (analyse prescriptive).</p>
 
       <!-- Data Monetization Flow -->
       <div class="data-strategy-box py-5">
@@ -217,9 +115,9 @@
             <div class="comex-card h-100 p-4 shadow-sm border-0 rounded-4" style="border-bottom: 4px solid #0d6efd !important;">
               <div class="d-flex align-items-center mb-3">
                 <div class="step-number me-3">01</div>
-                <h3 class="h6 fw-bold text-uppercase mb-0">Centralize Data</h3>
+                <h3 class="h6 fw-bold text-uppercase mb-0">Centraliser les données</h3>
               </div>
-              <p class="text-muted small mb-2">Gather disparate sources and build a single source of truth to eliminate silos.</p>
+              <p class="text-muted small mb-2">Rassembler des sources disparates et créer une source unique de vérité pour éliminer les silos.</p>
               <span class="badge bg-light text-primary border">Architecture & ETL</span>
             </div>
           </div>
@@ -228,7 +126,7 @@
             <div class="comex-card h-100 p-4 shadow-sm border-0 rounded-4" style="border-bottom: 4px solid #198754 !important;">
               <div class="d-flex align-items-center mb-3">
                 <div class="step-number me-3">02</div>
-                <h3 class="h6 fw-bold text-uppercase mb-0">Transform & Enrich</h3>
+                <h3 class="h6 fw-bold text-uppercase mb-0">Transformer et Enrichir</h3>
               </div>
               <p class="text-muted small mb-2">Design specialized datamarts and reporting tables for reliable and business-ready data.</p>
               <span class="badge bg-light text-success border">Modeling & Quality</span>
@@ -239,7 +137,7 @@
             <div class="comex-card h-100 p-4 shadow-sm border-0 rounded-4" style="border-bottom: 4px solid #ffc107 !important;">
               <div class="d-flex align-items-center mb-3">
                 <div class="step-number me-3">03</div>
-                <h3 class="h6 fw-bold text-uppercase mb-0">Get Insights</h3>
+                <h3 class="h6 fw-bold text-uppercase mb-0">Extraires des insights</h3>
               </div>
               <p class="text-muted small mb-2">Create Dashboards and insights that drive smart, data-backed decisions and grow revenue.</p>
               <span class="badge bg-light text-warning border">BI & ROI</span>
@@ -251,7 +149,9 @@
 
       <p class="text-muted cust-justify">87% of data science projects never make it to production (VentureBeat, 2019). The success of a data project relies on a good data strategy and and qualified data engineering team. We tend to recruit many Data Scientists and Data Analysts but few Data Engineers, resulting in data that are often unavailable and of poor quality, ultimately leading to the abandonment of data projects. As a Data Science Professional, my main mission is to help organizations define and implement a comprehensive data strategy.</p>
 
-      <p class="text-muted mb-0 cust-justify">If you are looking for a Data Expert to help your organization in the Data Transformation process, I'm the person you need. Let's discuss our collaboration. I will help define your data strategy and implement your analytical project successfully.</p>
+      <!-- Call to action -->
+      <hr>
+      <p class="text-muted mb-0 cust-justify">Si vous recherchez un expert des données pour vous accompagner dans sa transformation data, je suis la personne qu'il vous faut. Parlons de notre collaboration, je suis ouvert aux missions ponctuelles d'une année à deux. Je vous aiderai à définir votre stratégie data et à mener à bien votre projet analytique.</p>
     </div>
   </section>
 
@@ -260,7 +160,7 @@
     <div class="container py-5">
       <header class="mb-5">
         <p class="font-weight-bold text-primary text-uppercase letter-spacing-3">Discover more about me.</p>
-        <h2 class="text-uppercase lined">About</h2>
+        <h2 class="text-uppercase lined">À propos</h2>
       </header>
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pb-4">
@@ -275,29 +175,27 @@
         
           <!-- Value Proposition -->
           <p class="lead text-primary fw-bold mb-4">
-            Driving organizational growth through rigorous data strategy
+            Stimuler la croissance grâce à une stratégie data rigoureuse
           </p>
         
           <!-- Professional Summary -->
           <p class="text-dark cust-justify mb-3">
-            I'm Joseph Konka, a passionate data professional from Togo. I am currently working as <strong>Customer Analytics Supervisor</strong> 
-            at <strong>Yas Togo</strong> in Lomé. I bring over 7 years experience and over 4 years in Telecoms.
-            My expertises range  specializing in data engineering, data analytics and machine learning with a focus on Python based-tools. 
-            Since my beginings at Rintio, I've worked on various projects and I've developed solid skills.
+            Je suis Joseph Konka, Senior Data Analyst d'origine togolaise. J'occupe actuellement le poste de <strong>Customer Analytics Supervisor</strong> 
+            chez <strong>Yas Togo</strong> à Lomé. Fort de plus de 7 ans d'expérience, dont 4 ans dans les télécoms.
+            Je suis responsable des analyses de données stratégiques pour l'équipe dirigeante et j'évalue l'impact de nos campagnes commerciales.
           </p>
         
           <!-- Leadership & Academic Standing -->
           <p class="text-muted cust-justify mb-3">
-            I have a <strong>Bachelor's in Mathematics</strong> at University of Lomé and an <strong>Executive Master in AI & Data Analytics</strong> at HEC Rabat. 
-            I buit my expertise on the ground learning from my senior colleagues. I also hold some certifications such as <strong>Power BI Data Analyst</strong>, <strong>Azure Data Scientist</strong> and <strong>IT Specialist Python</strong>.
+            Je suis titulaire d'une <strong>Licence en Mathématiques</strong> (Université de Lomé) et d'un <strong>Executive Master IA & Data Analytics</strong> (HEC Rabat). 
+            J'ai acquis mon expertise sur le terrain en apprenant auprès de mes collègues plus expérimentés. Je possède également quelques certifications telles que <strong>Power BI Data Analyst</strong>, <strong>Azure Data Scientist</strong> et <strong>IT Specialist Python</strong>.
           </p>
         
           <!-- Ecosystem & Vision -->
           <p class="text-muted cust-justify mb-4">
-            Beyond my corporate responsibilities, I am dedicated to data evangelism through <strong>Algo Jungle</strong>, 
-            sharing specialized knowledge and field experiences across my website and YouTube channel. 
-            I develop <strong>DB Analytics Tools</strong> a Python package engineered to empower data professionals 
-            by streamlining complex workflows and optimizing interactions with relational data warehouses.
+            En dehors de mes responsabilités professionnelles, je publie du contenu éducatif à travers la plateforme <strong>Algo Jungle</strong>, 
+            sur Python et la Data. 
+            Je développe <strong>DB Analytics Tools</strong>, un package Python conçu pour simplifier les flux de travail complexes avec les entrepôts de données relationnels, permettant ainsi aux professionnels de la donnée de gagner du temps.
           </p>
         
           <!-- Executive Sign-off -->
@@ -311,7 +209,7 @@
   </section>
 
   <!-- Section Expertise -->
-  <section class="py-5" id="expertise">
+  <section class="bg-light py-5" id="expertise">
     <div class="container py-5">
       <header class="mb-5 pb-4">
         <p class="fw-bold text-primary text-uppercase letter-spacing-3">Batman would be jealous.</p>
@@ -384,6 +282,7 @@
       </div>
 
       <!-- Algo Jungle -->
+      <hr>
       <p class="">
         Ready to unlock the full potential of your data? Let’s collaborate to transform it into actionable insights that drive growth and innovation. Feel free to reach out, and let's discuss how I can help elevate your data project. Book a consultation with me today and take your data strategy to the next level! <a href="https://algojungle.github.io/" target="_blank">Click here 👇🏽</a>
       </p>
@@ -399,180 +298,114 @@
     </div>
   </section>
 
-  <!-- Education Section-->
-  <section class="py-5" id="education">
+  <!-- Experience & Education Section -->
+  <section class="bg-light py-5" id="experience">
     <div class="container py-5">
       <header class="mb-5 pb-4">
         <p class="fw-bold text-primary text-uppercase letter-spacing-3">Lazy isn't in my vocabulary.</p>
-        <h2 class="text-uppercase lined">Education</h2>
+        <h2 class="text-uppercase lined">Expérience & Formation</h2>
       </header>
-      <!--  Timeline -->
-      <ul class="timeline">
-        <!-- Timeline item-->
-        <li class="timeline-item ms-3 pb-4">
-          <div class="timeline-arrow"></div>
-          <div class="row gx-0 gy-4">
-            <div class="col-lg-5">
-              <p class="fw-bold mb-2 text-primary text-sm">Nov 2023 - Now </p>
-              <h2 class="h5 mb-0 text-uppercase">Executive Master AI & Data Analytics</h2>
-              <p class="text-sm mb-0">HEC Rabat</p><span class="small text-muted">Rabat, MORROCO</span>
-            </div>
-            <div class="col-lg-7">
-              <p class="text-muted">I'm currently doing an Executive Master (BAC+5) which include three certificates</p>
-              <ul class="text-muted ml-1 pl-3 pb-3">
-                <li>Data Analysis and Decision Engineering</li>
-                <li>Data Mining</li>
-                <li>Artificial Intelligence & Big Data</li>
-              </ul>
-              <p class="text-muted">At the end of the program, I will work on a business project to validate the master's degree.</p>
-            </div>
-          </div>
-        </li>
-        <!-- Timeline item-->
-        <li class="timeline-item ms-3 pb-4">
-          <div class="timeline-arrow"></div>
-          <div class="row gx-0 gy-4">
-            <div class="col-lg-5">
-              <p class="fw-bold mb-2 text-primary text-sm">2016 - 2019 </p>
-              <h2 class="h5 mb-0 text-uppercase">Mathematics Bachelor's</h2>
-              <p class="text-sm mb-0">University of Lome</p><span class="small text-muted">Lome, TOGO</span>
-            </div>
-            <div class="col-lg-7">
-              <p class="text-muted">Graduated in three years with GWA of 13.</p>
-                <ul class="text-muted ml-1 pl-3 pb-3">
-                  <li>Fundamental Mathematics and Physics</li>
-                  <li>Algoritms & Programming</li>
-                  <li>Statistical Analysis</li>
-                </ul>
-                <p class="text-muted">In addition to my major, I also studied African Art, Geography, English, Music, and Sociology.</p>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
 
-  <!-- Experience Section        -->
-  <section class="py-5 bg-light" id="experience">
-    <div class="container py-5">
-      <header class="mb-5 pb-4">
-        <p class="fw-bold text-primary text-uppercase letter-spacing-3">Yes. I've been around.</p>
-        <h2 class="text-uppercase lined">Experience</h2>
-      </header>
-      <!--  Timeline -->
-      <ul class="timeline">
-        <!-- Timeline item-->
-        <li class="timeline-item ms-3 pb-4">
-          <div class="timeline-arrow"></div>
-          <div class="row gx-0 gy-4">
-            <div class="col-lg-5">
-              <p class="fw-bold mb-2 text-primary text-sm">Feb 2024 - Present </p>
-              <h2 class="h5 mb-0 text-uppercase">Yas Togo</h2>
-              <p class="text-sm mb-0">Customer Analytics Supervisor</p><span class="small text-muted">Lomé, TOGO</span>
+      <!-- Two cols grid -->
+      <div class="row g-5">
+
+        <!-- Experience Section -->
+        <div class="col-lg-6">
+          <div class="d-flex align-items-center mb-4">
+            <div class="bg-primary-subtle text-primary p-2 rounded-3 me-3" style="background-color: #eff6ff;">
+              <i class="fas fa-briefcase fa-lg"></i>
             </div>
-            <div class="col-lg-7 text-muted">
-              <p>My very first leadership position</p>
-              <p>Missions:</p>
-              <ul class="ml-1 pl-3 pb-3">
-                <li>Lead the Data Analysts team (2 data analysts + 1 trainee)</li>
-                <li>Support BI & Analytics Manager in strategic initiatives</li>
-                <li>Document existing data platform and make propositions for improvements</li>
-                <li>Establish and share best practices</li>
-                <li>Lead Big Data and Machine Learning projects deployment</li>
-              </ul>
-              <p>Key Achievements:</p>
-              <ul class="ml-1 pl-3 pb-3">
-                <li>Wrote a Team Chart for Customer Analytics Team to align with N+1 and N+2 on the team missions</li>
-                <li>Deployed successfully Apache Airflow to simplify jobs orchectsration and runs tracking</li>
-                <li>Deployed successfully Jupyter Hub as a central workspace for the all the BI team without any installation</li>
-                <li>Contributed to the migration to Power BI Service</li>
-                <li>Monitor and evaluate marketing, distribution and customers service actions</li>
-              </ul>
-              <p>Tools: SQL, Talend, Excel, Power BI, Python, SSAS, Apache Airflow, Apache Spark, MongoDB, TensorFlow, MLflow</p>
-            </div>
+            <h3 class="h4 text-uppercase fw-bold m-0" style="color: #0f172a; font-size: 1.25rem;">Experience</h3>
           </div>
-        </li>
-        <!-- Timeline item-->
-        <li class="timeline-item ms-3 pb-4">
-          <div class="timeline-arrow"></div>
-          <div class="row gx-0 gy-4">
-            <div class="col-lg-5">
-              <p class="fw-bold mb-2 text-primary text-sm">Feb 2022 - Jan 2024 </p>
-              <h2 class="h5 mb-0 text-uppercase">Yas Togo</h2>
-              <p class="text-sm mb-0">Ad Hoc Analytics Officer</p><span class="small text-muted">Lomé, TOGO</span>
+
+          <ul class="timeline">
+            <!-- Timeline item 1 -->
+            <li class="timeline-item ms-3 pb-4">
+              <div class="timeline-arrow"></div>
+              <div class="timeline-card">
+                <p class="fw-bold mb-2 text-primary text-sm small"><i class="far fa-calendar-alt me-1"></i> Feb 2024 - Present</p>
+                <h4 class="h5 mb-1 text-uppercase fw-bold" style="font-size: 1.05rem; color: #1e293b;">Customer Analytics Supervisor</h4>
+                <p class="text-sm mb-0">Yas Togo</p>
+                <span class="small text-muted">Lomé, TOGO</span>
+              </div>
+            </li>
+            <!-- Timeline item 2 -->
+            <li class="timeline-item ms-3 pb-4">
+              <div class="timeline-arrow"></div>
+              <div class="timeline-card">
+                <p class="fw-bold mb-2 text-primary text-sm small"><i class="far fa-calendar-alt me-1"></i> Feb 2022 - Jan 2024</p>
+                <h4 class="h5 mb-1 text-uppercase fw-bold" style="font-size: 1.05rem; color: #1e293b;">Ad Hoc Analytics Officer</h4>
+                <p class="text-sm mb-0">Yas Togo</p>
+                <span class="small text-muted">Lomé, TOGO</span>
+              </div>
+            </li>
+            <!-- Timeline item 3 -->
+            <li class="timeline-item ms-3 pb-4">
+              <div class="timeline-arrow"></div>
+              <div class="timeline-card">
+                <p class="fw-bold mb-2 text-primary text-sm small"><i class="far fa-calendar-alt me-1"></i> May 2020 - Jan 2022</p>
+                <h4 class="h5 mb-1 text-uppercase fw-bold" style="font-size: 1.05rem; color: #1e293b;">Junior Data Scientist</h4>
+                <p class="text-sm mb-0">RINTIO</p>
+                <span class="small text-muted">Cotonou, BENIN</span>
+              </div>
+            </li>
+            <!-- Timeline item 4 -->
+            <li class="timeline-item ms-3 pb-4">
+              <div class="timeline-arrow"></div>
+              <div class="timeline-card">
+                <p class="fw-bold mb-2 text-primary text-sm small"><i class="far fa-calendar-alt me-1"></i> Nov 2019 - May 2020</p>
+                <h4 class="h5 mb-1 text-uppercase fw-bold" style="font-size: 1.05rem; color: #1e293b;">Trainee Data Scientist</h4>
+                <p class="text-sm mb-0">RINTIO</p>
+                <span class="small text-muted">Cotonou, BENIN</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Education Section -->
+        <div class="col-lg-6">
+          <div class="d-flex align-items-center mb-4">
+            <div class="bg-primary-subtle text-primary p-2 rounded-3 me-3" style="background-color: #eff6ff;">
+              <i class="fas fa-graduation-cap fa-lg"></i>
             </div>
-            <div class="col-lg-7 text-muted">
-              <p>In Feb 2022, I joined the new BI team as Data Analyst</p>
-              <p>Missions:</p>
-              <ul class="ml-1 pl-3 pb-3">
-                <li>Support operationnal teams, Marketing, Distribution and MFS</li>
-                <li>Handle ad-hoc data analysis requests</li>
-                <li>Migrate reporting on Power BI</li>
-              </ul>
-              <p>Key Achievements:</p>
-              <ul class="ml-1 pl-3 pb-3">
-                <li>Support Marketing team by providing datasets for analysis</li>
-                <li>Update existing ETL and develop new ones (Combined SQL Functions + Talend + Windows Task Planner)</li>
-                <li>Migrate Excel reports to Power BI and design several Power BI reports</li>
-                <li>Designed and implemented datamart for MFS to centralize data and KPIs</li>
-                <li>Developed Tabular Cubes using Analysis Services</li>
-              </ul>
-              <p>Tools: SQL, Talend, Excel, Power BI, Python, SSAS</p>
-            </div>
+            <h3 class="h4 text-uppercase fw-bold m-0" style="color: #0f172a; font-size: 1.25rem;">Formation</h3>
           </div>
-        </li>
-        <!-- Timeline item-->
-        <li class="timeline-item ms-3 pb-4">
-          <div class="timeline-arrow"></div>
-          <div class="row gx-0 gy-4">
-            <div class="col-lg-5">
-              <p class="fw-bold mb-2 text-primary text-sm">May 2020 - Jan 2022 </p>
-              <h2 class="h5 mb-0 text-uppercase">RINTIO</h2>
-              <p class="text-sm mb-0">Junior Data Scientist</p><span class="small text-muted">Cotonou, BENIN</span>
-            </div>
-            <div class="col-lg-7 text-muted">
-              <!-- <p>Became Lead Data Scientist on Idermato application, on the exposure of models by APIs. Establishment of an image bank using Piwigo.</p> -->
-              <p>Missions:</p>
-              <ul class="ml-1 pl-3 pb-3">
-                <li>Design and implement machine learning solutions</li>
-                <li>Contribute to Python backend projects</li>
-              </ul>
-              <p>Key Achievements:</p>
-              <ul class="ml-1 pl-3 pb-3">
-                <li>Designed and implemented an end-to-end image captioning model</li>
-                <li>Deployed TensorFlow models efficiently using TensorFlow Serving</li>
-                <li>Developed APIs with Flask to expose machine learning models for production use</li>
-                <li>Designed user-friendly interfaces with Gradio to simplify testing and create live demos</li>
-                <li>Conducted web scraping to collect and preprocess online data</li>
-                <li>Contributed to several Python Backend projects</li>
-                <li>Prepared and executed manual tests for applications to ensure quality and functionality</li>
-              </ul>
-              <p>Tools: Git, Python, Pandas, TensorFlow, Flask, Gradio, BeautifulSoup, Selenium.</p>
-            </div>
-          </div>
-        </li>
-        <!-- Timeline item-->
-        <li class="timeline-item ms-3 pb-4">
-          <div class="timeline-arrow"></div>
-          <div class="row gx-0 gy-4">
-            <div class="col-lg-5">
-              <p class="fw-bold mb-2 text-primary text-sm">Nov 2019 - May 2020 </p>
-              <h2 class="h5 mb-0 text-uppercase">RINTIO</h2>
-              <p class="text-sm mb-0">Trainee Data Scientist</p><span class="small text-muted">Cotonou, BENIN</span>
-            </div>
-            <div class="col-lg-7 text-muted">
-              <p>The beginning of my data science journey. I joined the Rintio team after participating in the Africa Tech Up Tour Bootcamp in Lomé.</p>
-              <p>Key Achievements:</p>
-              <ul class="ml-1 pl-3 pb-3">
-                <li>Learnt in depth Git Linux, Python, Flask, Tensorflow, DevOps, Agility</li>
-                <li>Upgraded a tensorflow existing project from to the high level API Keras</li>
-                <li>Contributed in dashboard development using Bokeh</li>
-              </ul>
-              <p>Tools: Git, Python, Pandas, Keras, Bokeh</p>
-            </div>
-          </div>
-        </li>
-      </ul>
+
+          <ul class="timeline">
+            <!-- Timeline item 1 -->
+            <li class="timeline-item ms-3 pb-4">
+              <div class="timeline-arrow"></div>
+              <div class="timeline-card">
+                <p class="fw-bold mb-2 text-primary text-sm small"><i class="far fa-calendar-alt me-1"></i> 2023 - 2024</p>
+                <h4 class="h5 mb-1 text-uppercase fw-bold" style="font-size: 1.05rem; color: #1e293b;">Executive Master IA & Data Analytics</h4>
+                <p class="text-sm mb-0">HEC Rabat</p>
+                <span class="small text-muted">Rabat, MOROCCO</span>
+              </div>
+            </li>
+            <!-- Timeline item 2 -->
+            <li class="timeline-item ms-3 pb-4">
+              <div class="timeline-arrow"></div>
+              <div class="timeline-card">
+                <p class="fw-bold mb-2 text-primary text-sm small"><i class="far fa-calendar-alt me-1"></i> 2016 - 2019</p>
+                <h4 class="h5 mb-1 text-uppercase fw-bold" style="font-size: 1.05rem; color: #1e293b;">Licence en Mathématiques</h4>
+                <p class="text-sm mb-0">Université de Lomé</p>
+                <span class="small text-muted">Lome, TOGO</span>
+              </div>
+            </li>
+            <!-- Timeline item 3 -->
+            <li class="timeline-item ms-3 pb-4">
+              <div class="timeline-arrow"></div>
+              <div class="timeline-card">
+                <p class="fw-bold mb-2 text-primary text-sm small"><i class="far fa-calendar-alt me-1"></i> 2013 - 2016</p>
+                <h4 class="h5 mb-1 text-uppercase fw-bold" style="font-size: 1.05rem; color: #1e293b;">Baccaluaréat II</h4>
+                <p class="text-sm mb-0">Lycée d'Agoè</p>
+                <span class="small text-muted">Lome, TOGO</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -581,135 +414,120 @@
     <div class="py-5 container">
       <header class="mb-5 pb-4">
         <p class="font-weight-bold text-primary text-uppercase letter-spacing-3">Batman would be jealous.</p>
-        <h2 class="text-uppercase lined">Projects</h2>
+        <h2 class="text-uppercase lined">Projets</h2>
       </header>
       <div class="row">
         <div class="col-md-6 mb-5 mb-md-0">
           <h3 class="h4">Algo Jungle</h3>
-          <p class="text-muted text-small pl-3"><strong>Algo Jungle</strong> is an e-learning platform dedicated to computer science evangelism with a special focus on algorithms. Below the covered topics:</p>
+          <p class="text-muted text-small pl-3"><strong>Algo Jungle</strong> est une plateforme d'apprentissage en ligne dédiée à la diffusion des connaissances sur Python et la Data. Voici les sujets abordés :</p>
           <ul class="ml-1 pl-6 text-small text-muted">
-            <li>Algorithms & Data Structures</li>
-            <li>Programming (C & Python)</li>
+            <li>Algorithmes & Structures de données</li>
+            <li>Programmation (C & Python)</li>
             <li>Business Intelligence & Data Analytics</li>
             <li>Data Science & Machine Learning</li>
           </ul>
-          <p class="text-muted text-small pl-3">URL: <a href="https://joekakone.github.io/learning" target="_blank">https://joekakone.github.io/learning</a></p>
+          <p class="text-muted text-small pl-3">Lien du projet: <a href="https://joekakone.github.io/learning" target="_blank">https://joekakone.github.io/learning</a></p>
         </div>
         <div class="col-md-6 mb-5">
           <h3 class="h4">Databases Analytics Tools</h3>
-          <p class="text-muted text-small pl-3"><strong>DB Analytics Tools</strong> is a open source micro-framework that helps data analysts to work with relational databases (data warehouses). </p>
+          <p class="text-muted text-small pl-3"><strong>DB Analytics Tools</strong> est un micro-framework open source qui aide les analystes de données à travailler avec des bases de données relationnelles (entrepôts de données). </p>
           <ul class="ml-1 pl-6 text-small text-muted">
-            <li>Execute SQL queries (DDL/DCL/DML)</li>
-            <li>Run ETL SQL Procedures</li>
-            <li>Data Import & Export</li>
-            <li>Supports Postgres, Greenplum and SQL Server</li>
+            <li>Exécuter des requêtes SQL (DDL/DCL/DML)</li>
+            <li>Exécuter les procédures et fonctions SQL (ETL)</li>
+            <li>Importation et Exportation de données</li>
+            <li>Compatible avec Postgres, Greenplum et SQL Server</li>
           </ul>
-          <p class="text-muted text-small pl-3">Project URL: <a href="https://joekakone.github.io/db-analytics-tools" target="_blank">https://joekakone.github.io/db-analytics-tools</a></p>
+          <p class="text-muted text-small pl-3">Lien du projet: <a href="https://joekakone.github.io/db-analytics-tools" target="_blank">https://joekakone.github.io/db-analytics-tools</a></p>
         </div>
         <div class="col-md-6 mb-5">
           <h3 class="h4">Jobs Tracker</h3>
-          <p class="text-muted text-small pl-3">Jobs Tracker is a job alert system which allow users to configure notifications alerts about specific jobs in Togo. Initially , I created it for my personal need to track jobs offers in Lomé.</p>
+          <p class="text-muted text-small pl-3"><strong>Jobs Tracker</strong> est un système d'alerte emploi qui permet aux utilisateurs de configurer des notifications concernant des offres d'emploi spécifiques au Togo.</p>
           <ul class="ml-1 pl-6 text-small text-muted">
-            <li>Extract jobs offers from Emploi.tg and Emploitogo.info</li>
-            <li>Match jobs offers with key words</li>
-            <li>Send email with list of matched offers</li>
+            <li>Extraire les offres d'emploi de Emploi.tg et Emploitogo.info</li>
+            <li>Associer les offres d'emploi aux mots clés</li>
+            <li>Envoyer un mail contenant la liste des offres correspondantes</li>
           </ul>
-          <p class="text-muted text-small pl-3">Tools: Python, Requests, BeautifulSoup, Bokeh, AddThis</p>
-          <p class="text-muted text-small pl-3">URL: <a href="https://joekakone.github.io/jobs-tracker-frontend/" target="_blank">https://joekakone.github.io/jobs-tracker</a></p>
+          <p class="text-muted text-small pl-3">Outils: Python, Requests, BeautifulSoup, Bokeh, AddThis</p>
+          <p class="text-muted text-small pl-3">Lien du projet: <a href="https://joekakone.github.io/jobs-tracker-frontend/" target="_blank">https://joekakone.github.io/jobs-tracker</a></p>
         </div>
         <div class="col-md-6 mb-5">
           <h3 class="h4">Deputes.fr</h3>
-          <p class="text-muted text-small pl-3">You can build dashbord using Bokeh library. This one is an example, it's called <strong>Deputes.fr</strong> based on French parliament data. It is an bokeh web application.</p>
+          <p class="text-muted text-small pl-3"><strong>Deputes.fr</strong> est un dashbord interactif qui vous permet de visulaiser les données de l'Assemnlée Nationale Française. Il est développé avec le package <strong>Bokeh</strong>.</p>
           <ul class="ml-1 pl-6 text-small text-muted">
-            <li>KPIs: Count of deputies, Count of groups, Avegrage age, Average experience</li>
-            <li>Graphs: Donut Chart, V Barplot, H Barplot</li>
-            <li>Table: List of deputies</li>
+            <li>KPIs: Nombre de députés, Nombre de groupes, Âge moyen, Expérience moyenne</li>
+            <li>Graphiques : Donut Chart, Barplot (H & V)</li>
+            <li>Tableau : Liste des députés</li>
           </ul>
-          <p class="text-muted text-small pl-3">Tools: Python, Pandas, Bokeh</p>
-          <p class="text-muted text-small pl-3">Source Code: <a href="https://github.com/joekakone/deputes-fr" target="_blank">https://github.com/joekakone/deputes-fr</a></p>
+          <p class="text-muted text-small pl-3">Outils: Python, Pandas, Bokeh</p>
+          <p class="text-muted text-small pl-3">Lien du projet: <a href="https://github.com/joekakone/deputes-fr" target="_blank">https://github.com/joekakone/deputes-fr</a></p>
         </div>
       </div>
+
+      <!-- Portofolio -->
+      <hr>
+      <p class="">
+         Il s'agit de projets personnels et non de mon portofolio. Découvrez mes projets Python & Data à travers <a href="/portofolio"> mon Portofolio ici 👇🏽</a>
+      </p>
     </div>
   </section>
 
   <!-- Training Section        -->
-  <section class="bg-light py-5" id="training">
+  <section class="py-5 bg-light" id="training">
     <div class="container py-5">
       <header class="mb-5 pb-4">
-        <p class="fw-bold text-primary text-uppercase letter-spacing-3">I will show you the way.</p>
-        <h2 class="text-uppercase lined">Training</h2>
+        <p class="fw-bold text-primary text-uppercase letter-spacing-3">Offres de formation.</p>
+        <h2 class="lined text-uppercase">Devenez Expert Data</h2>
       </header>
-      <div class="row pb-4">
-        <!-- Become Data Engineer -->
-        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 pb-3">
-          <a class="px-3 py-3 contact-item shadow-sm reset-anchor d-block" href="https://wa.me/+22891518923" target="_blank">
-            <h4 class="contact-item-title px-3">Become Data Engineer</h4>
-            <p class="text-small px-3">3 Months | Online | 175.000 XOF | 3 places</p>
-
-            <ul class="py-2">
-              <li><p class="#">SQL for Data Engineering</p></li>
-              <li><p class="#">Data Integration with Talend</p></li>
-              <li><p class="#">Python Packages for Data Science</p></li>
-              <li><p class="#">Pipelines Orchestration with Airflow</p></li>
-              <li><p class="#">Data Processing with Spark</p></li>
-              <li><p class="#">Data Visualization with Power BI</p></li>
-              <li><p class="#">Web Scraping with Python</p></li>
-            </ul>
-
-            <div class="text-center pb-4">
-              <button class="btn btn- sm btn-secondary" type="button">Reserve now</button>
+      <div class="row gy-4">
+        <!-- Data Engineer -->
+        <div class="col-lg-4">
+          <div class="course-card h-100 p-4 border rounded shadow-sm">
+            <div class="icon-box mb-3 text-primary fs-2"><i class="fas fa-tools"></i></div>
+            <h3 class="h5 text-uppercase fw-bold">Data Engineer</h3>
+            <p class="text-muted text-sm mb-4">Concevez et gérez les infrastructures. SQL, Spark, Airflow, Talend et gestion des bases de données.</p>
+            <div class="ratio ratio-16x9 rounded overflow-hidden">
+                <iframe src="https://drive.google.com/file/d/1gDyZRaznTXH8zmcKqsv3aU1FRB6Jo1xx/preview" allow="autoplay"></iframe>
             </div>
-          </a>
+            <div class="d-flex justify-content-between align-items-center pt-3 mb-3">
+              <p class="small text-primary mb-0"><i class="far fa-clock me-2"></i>Durée : 3 mois</p>
+              <div class="price-badge px-3 py-1 rounded-pill bg-light text-primary fw-bold">175.000 FCFA</div>
+            </div>
+            <a href="#" class="btn btn-primary w-100 text-uppercase">S'inscrire</a>
+          </div>
         </div>
-
-        <!-- Become Data Analyst -->
-        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 pb-3">
-          <a class="px-3 py-3 contact-item shadow-sm reset-anchor d-block" href="https://wa.me/+22891518923" target="_blank">
-            <h4 class="contact-item-title px-3">Become Data Analyst</h4>
-            <p class="text-small px-3">3 Months | Online | 125.000 XOF | 5 places</p>
-
-            <ul class="py-2">
-              <li><p class="#">Descriptive Statistics with R</p></li>
-              <li><p class="#">Reporting & Analysis with Excel</p></li>
-              <li><p class="#">SQL for Data Analysis</p></li>
-              <li><p class="#">Data Visualization with Power BI</p></li>
-              <li><p class="#">Python Packages for Data Science</p></li>
-              <li><p class="#">Data Integration with Talend</p></li>
-              <li><p class="#">Data Visualization with Tableau</p></li>
-            </ul>
-
-            <div class="text-center pb-4">
-              <button class="btn btn- sm btn-secondary" type="button">Reserve now</button>
+        <!-- Data Analyst -->
+        <div class="col-lg-4">
+          <div class="course-card h-100 p-4 border rounded shadow-sm">
+            <div class="icon-box mb-3 text-primary fs-2"><i class="fas fa-chart-pie"></i></div>
+            <h3 class="h5 text-uppercase fw-bold">Data Analyst</h3>
+            <p class="text-muted text-sm mb-4">Collectez et analysez pour sortir des insights. Statistiques, SQL, Excel, Power BI et Python.</p>
+            <div class="ratio ratio-16x9 rounded overflow-hidden">
+              <iframe src="https://drive.google.com/file/d/1qOhOlP5_DIlLQtyD-aeGWfvgzJ2bxn7y/preview" allow="autoplay"></iframe>
             </div>
-          </a>
+            <div class="d-flex justify-content-between align-items-center pt-3 mb-3">
+              <p class="small text-primary mb-0"><i class="far fa-clock me-2"></i>Durée : 3 mois</p>
+              <div class="price-badge px-3 py-1 rounded-pill bg-light text-primary fw-bold">125.000 FCFA</div>
+            </div>
+            <a href="#" class="btn btn-primary w-100 text-uppercase">S'inscrire</a>
+          </div>
         </div>
-
-        <!-- Become Data Scientist -->
-        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 pb-3">
-          <a class="px-3 py-3 contact-item shadow-sm reset-anchor d-block" href="https://wa.me/+22891518923" target="_blank">
-            <h4 class="contact-item-title px-3">Become Data Scientist</h4>
-            <p class="text-small px-3">3 Months | Online | 225.000 XOF | 2 places</p>
-
-            <ul class="py-2">
-              <li><p class="#">Python Packages for Data Science</p></li>
-              <li><p class="#">Fundamentals of Machine Learning</p></li>
-              <li><p class="#">Data Processing with Spark</p></li>
-              <li><p class="#">Machine Learning with Scikit-learn</p></li>
-              <li><p class="#">Deep Learning with TensorFlow</p></li>
-              <li><p class="#">Data Visualization with Power BI</p></li>
-              <li><p class="#">Web Scraping with Python</p></li>
-            </ul>
-
-            <div class="text-center pb-4">
-              <button class="btn btn- sm btn-secondary" type="button">Reserve now</button>
+        <!-- Data Scientist -->
+        <div class="col-lg-4">
+          <div class="course-card h-100 p-4 border rounded shadow-sm">
+            <div class="icon-box mb-3 text-primary fs-2"><i class="fas fa-brain"></i></div>
+            <h3 class="h5 text-uppercase fw-bold">Data Scientist</h3>
+            <p class="text-muted text-sm mb-4">Exploitez le Machine Learning. Modèles prédictifs avec Scikit-learn, TensorFlow et MLflow.</p>
+            <div class="ratio ratio-16x9 rounded overflow-hidden">
+              <iframe src="https://drive.google.com/file/d/1CEIKrnIJWyHxVPPZU_vWIl9by4Yn4tr6/preview" allow="autoplay"></iframe>
             </div>
-          </a>
+            <div class="d-flex justify-content-between align-items-center pt-3 mb-3">
+              <p class="small text-primary mb-0"><i class="far fa-clock me-2"></i>Durée : 3 mois</p>
+              <div class="price-badge px-3 py-1 rounded-pill bg-light text-primary fw-bold">225.000 FCFA</div>
+            </div>
+            <a href="#" class="btn btn-primary w-100 text-uppercase">S'inscrire</a>
+          </div>
         </div>
       </div>
-
-      <!-- Algo Jungle -->
-      <p class="">You can also learn Computer Science, Python, Data and more for free on <a href="learning/" target="_blank">Algo Jungle</a>. Don't miss the chance to land your dream data job, <a href="https://algojungle.github.io" target="_blank">access now👉🏽click here
-!</a></p>
     </div>
   </section>
 
@@ -717,14 +535,14 @@
   <section class="py-5" id="contact">
     <div class="container py-5">
       <header class="mb-5 pb-4">
-        <p class="font-weight-bold text-primary text-uppercase letter-spacing-3">Let's get in touch.</p>
+        <p class="font-weight-bold text-primary text-uppercase letter-spacing-3">Prenons contact.</p>
         <h2 class="text-uppercase lined">Contact</h2>
       </header>
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
           <!-- Location -->
           <div class="contact-item-s pb-3">
-            <h4>Address</h4>
+            <h4>Adresse</h4>
             <p>Lome, Togo</p>
           </div>
           <!-- Email -->
@@ -734,12 +552,12 @@
           </div>
           <!-- Telephone -->
           <div class="contact-item-s pb-3">
-            <h4>Phone</h4>
+            <h4>Téléphone</h4>
             <p><a href="tel:+228 91 51 89 23" target="_blank">+228 91 51 89 23</a></p>
           </div>
           <!-- Website -->
           <div class="contact-item-s pb-3">
-            <h4>Website</h4>
+            <h4>Site Web</h4>
             <p><a href="#">www.josephkonkathedataguy.com</a></p>
           </div>
         </div>
@@ -747,47 +565,45 @@
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
           <form id="contactForm" onsubmit="buildWhatsappUrl(event)">
             <fieldset>
-              <!-- <legend>Feel free to send me a message</legend> -->
-              <h4 class="mb-3">Feel free to send me a message</h4>
+              <h4 class="mb-3">N'hésitez pas à m'envoyer un message</h4>
               <div class="row">              
                 <div class="col-md-6 mb-3">
-                  <input class="form-control" id="InputFirstName" type="name" placeholder="First name" required>
+                  <input class="form-control" id="InputFirstName" type="name" placeholder="Prénom" required>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <input class="form-control" id="InputLastName" type="name" placeholder="Last name" required>
+                  <input class="form-control" id="InputLastName" type="name" placeholder="Nom" required>
                 </div>
               </div>
 
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <input class="form-control" id="InputPhone" type="tel" placeholder="Phone number" required>
+                  <input class="form-control" id="InputPhone" type="tel" placeholder="Numéro de téléphone" required>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <input class="form-control" id="InputSubject" type="text" placeholder="Subject" required>
+                  <input class="form-control" id="InputSubject" type="text" placeholder="Objet de votre message" required>
                 </div>
               </div>
 
               <div class="row">
                 <div class="mb-3">
-                  <input class="form-control" id="InputEmail" type="email" placeholder="Email address" required>
+                  <input class="form-control" id="InputEmail" type="email" placeholder="Adresse Email" required>
                 </div>
               </div>
               <div class="row">
                 <div class="mb-3">
                   <textarea class="form-control" id="InputMessage" rows="5" data-rule="required"
-                  data-msg="Please write something for us" placeholder="Type your message here" required></textarea>
+                  data-msg="Please write something for us" placeholder="Écrivez votre message ici" required></textarea>
                 </div>
               </div>
-              <!-- <button class="btn btn-primary" type="submit">Send message</button> -->
               <div class="row mt-3">
                 <div class="col-md-6 mb-2">
                   <button class="btn btn-success w-100" type="submit">
-                    <i class="fab fa-whatsapp me-2"></i> Send via WhatsApp
+                    <i class="fab fa-whatsapp me-2"></i> Envoyer via WhatsApp
                   </button>
                 </div>
                 <div class="col-md-6">
                   <button class="btn btn-primary w-100" type="button" onclick="buildMailtoUrl(event)">
-                    <i class="fas fa-envelope me-2"></i> Send via Email
+                    <i class="fas fa-envelope me-2"></i> Envoyer via Email
                   </button>
                 </div>
               </div>
@@ -813,7 +629,7 @@
             <div class="col-lg-7 mx-auto">
                 <h2 class="text-uppercase mb-0">Joseph Konka </h2>
                 <h6 class="text-primary text-uppercase mb-0 letter-spacing-3">Senior Data Analyst | Data Scientist</h6>
-                <p class="text-muted my-4">Project Management - Data Engineering - Data Analytics - Python Programming</p>
+                <p class="text-muted my-4">Project Management - Data Engineering - Data Analytics - Backend Python</p>
                 <ul class="list-inline mb-0">
                     <li class="list-inline-item"><a class="social-link" href="https://wa.me/+22891518923" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
                     <li class="list-inline-item"><a class="social-link" href="https://github.com/joekakone" target="_blank"><i class="fab fa-github"></i></a></li>
@@ -915,6 +731,35 @@
       // 6. Action d'ouverture
       console.log("Lien généré : ", whatsappLink); // Pour débugger dans la console (F12)
       window.open(whatsappLink, '_blank');
+    }
+
+    // Reverse Training
+    /**
+     * Déclenche une ouverture de session WhatsApp avec un message d'inscription formaté
+     * @param {string} courseName - Le titre de la formation
+     * @param {string} duration - La durée
+     * @param {string} price - Le coût de la formation
+     */
+    function reserveTraining(courseName, duration, price) {
+      // Numéro WhatsApp de Joseph (sans le + ou les espaces)
+      const phoneNumber = "22892928586"; 
+      
+      // Construction du message formaté de manière claire et professionnelle
+      const message = `Bonjour Joseph !\n\n` +
+                      `Je souhaite réserver ma place pour la formation suivante :\n\n` +
+                      `🎓 *Formation :* ${courseName}\n` +
+                      `⏱️ *Durée :* ${duration}\n` +
+                      `💰 *Tarif :* ${price}\n\n` +
+                      `Pourriez-vous m'indiquer la démarche à suivre pour finaliser mon inscription ? Merci !`;
+
+      // Encodage propre du message pour les URL Web
+      const encodedText = encodeURIComponent(message);
+      
+      // URL de redirection vers WhatsApp
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+      
+      // Ouverture du lien dans un nouvel onglet
+      window.open(whatsappURL, '_blank');
     }
   </script>
 

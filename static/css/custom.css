@@ -79,3 +79,111 @@
     align-items: center;
     margin-bottom: 0;
 }
+
+
+/******************************************************************
+Additional CSS 
+******************************************************************/
+
+.comex-card {
+    background: #ffffff;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.comex-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08) !important;
+}
+
+.step-number {
+    font-size: 0.9rem;
+    font-weight: 800;
+    background: #f8f9fa;
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: #212529;
+    border: 1px solid #dee2e6;
+}
+
+/* Ajustement pour éviter le débordement sur les petits écrans */
+.data-strategy-box .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Grayscale pour les logos de certifs pour un look plus corporate */
+.cert-logo {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.cert-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+/* ************************************************** */
+/* Styles personnalisés pour l'alignement des icônes à gauche */
+.expertise-icon {
+  width: 90px;
+  height: 90px;
+  min-width: 90px; /* Force la largeur pour l'icône */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+/* Effet au survol */
+.expertise-icon:hover {
+  transform: translateY(-5px);
+  background-color: #007bff !important;
+}
+
+.expertise-icon:hover i {
+  color: #ffffff !important;
+}
+
+/* Ajustements généraux du template */
+.letter-spacing-3 {
+  letter-spacing: 0.3rem;
+}
+
+.lined::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #007bff;
+  margin-top: 10px;
+}
+
+/* Justification personnalisée du texte */
+.cust-justify {
+  text-align: justify;
+}
+
+/* Media queries pour mobile */
+@media (max-width: 576px) {
+  .expertise-icon {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+  }
+  .expertise-icon i {
+    font-size: 2rem !important;
+  }
+  .flex-mobile-column {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .text-container-mobile {
+    margin-top: 15px;
+  }
+}
