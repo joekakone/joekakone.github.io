@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Joseph Konka | The Data Guy</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Joseph Konka">
+  <meta property="og:description" content="Joseph Konka - The Data Guy">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://joekakone.github.io">
+  <meta property="og:image" content="https://joekakone.github.io/static/img/cover-joseph-konka.png">
+  <meta property="og:image:width" content="820">
+  <meta property="og:image:height" content="312">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,800&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://joekakone.github.io/static/css/style.blue.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://joekakone.github.io/static/css/custom.css">
+  <link rel="stylesheet" href="./static/css/custom.css">
+  <link rel="shortcut icon" href="https://joekakone.github.io/static/img/favicon.png">
+
+  <style></style>
+</head>
+
+<body class="scrollspy-example" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">
+  <!-- Navbar Menu -->
+  <header class="header">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="navbar">
+      <div class="container"><a class="navbar-brand" href="index.html"><img
+            src="https://joekakone.github.io/static/img/logo.svg" alt="" width="45"></a>
+        <button class="navbar-toggler navbar-toggler-end" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html#hero">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#about">À propos</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#expertise">Expertise</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#experience">Parcours</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#projects">Projets</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#training">Mentoring</a></li>
+            <li class="nav-item"><a class="nav-link active" href="portofolio.html">Portofolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="" id="hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://joekakone.github.io/static/img/shutterstock-cover.jpg'); background-size: cover; background-position: center; height: 50vh; display: flex; align-items: center;">
+    <div class="container text-white">
+      <h1 class="display-4 fw-bold mb-3 pt-5">Portofolio</h1>
+      <p class="lead col-lg-9">Pendant les 6 dernières années, j'ai travaillé sur une panoplie de projets, dont 4 ans dans les Télécoms. Voici une sélection de mes réalisations, personnelles et professionnelles, en Data Engineering, Data Analytics et Machine Learning.</p>
+    </div>
+  </section>
+
+  <!-- Projects Grid Section -->
+  <section class="py-5" id="projects">
+    <div class="py-5 container">
+      <header class="mb-5 pb-4">
+        <p class="font-weight-bold text-primary text-uppercase letter-spacing-3">De la théorie à la pratique.</p>
+        <h2 class="text-uppercase lined">Mes réalisations</h2>
+      </header>
+
+      <div class="row g-4">
+
+        <!-- 1. Classification d'images de fleurs -->
+        <div class="col-md-6 col-lg-4">
+          <div class="h-100 border rounded-4 overflow-hidden shadow-sm">
+            <div class="d-flex align-items-center justify-content-center" style="height: 140px; background: linear-gradient(135deg, #0d6efd, #084298);">
+              <i class="fas fa-seedling" style="font-size: 2.5rem; color: rgba(255,255,255,0.9);"></i>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="badge bg-primary-subtle text-primary">Personnel</span>
+                <span class="text-muted text-small"><i class="fab fa-python me-1"></i>TensorFlow</span>
+              </div>
+              <h3 class="h6 fw-bold mb-2">Classification d'images de fleurs</h3>
+              <p class="text-muted text-small mb-2"><strong>Contexte :</strong> Explorer les capacités du deep learning pour la reconnaissance d'images à partir de zéro.</p>
+              <p class="text-muted text-small mb-2"><strong>Solution :</strong> Réseau de neurones convolutif (CNN) entraîné avec TensorFlow/Keras sur un jeu de données d'images de fleurs.</p>
+              <p class="text-muted text-small mb-3"><strong>Résultat :</strong> Modèle capable de classer plusieurs espèces avec une bonne précision, publié sur GitHub.</p>
+              <a href="#" target="_blank" class="text-small">Voir le projet <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Génération de discours style Obama -->
+        <div class="col-md-6 col-lg-4">
+          <div class="h-100 border rounded-4 overflow-hidden shadow-sm">
+            <div class="d-flex align-items-center justify-content-center" style="height: 140px; background: linear-gradient(135deg, #6f42c1, #4b2e91);">
+              <i class="fas fa-microphone-alt" style="font-size: 2.5rem; color: rgba(255,255,255,0.9);"></i>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="badge bg-primary-subtle text-primary">Personnel</span>
+                <span class="text-muted text-small"><i class="fab fa-python me-1"></i>NLP</span>
+              </div>
+              <h3 class="h6 fw-bold mb-2">Génération de discours (style Obama)</h3>
+              <p class="text-muted text-small mb-2"><strong>Contexte :</strong> Expérimenter la génération de texte à partir d'un corpus stylistique cohérent.</p>
+              <p class="text-muted text-small mb-2"><strong>Solution :</strong> Modèle de génération de texte entraîné sur un corpus de discours, pour reproduire le style rhétorique de l'orateur.</p>
+              <p class="text-muted text-small mb-3"><strong>Résultat :</strong> Génération de discours cohérents, illustrant la maîtrise des techniques de NLP au-delà de l'analyse tabulaire.</p>
+              <a href="#" target="_blank" class="text-small">Voir le projet <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Dashboard Covid19 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="h-100 border rounded-4 overflow-hidden shadow-sm">
+            <div class="d-flex align-items-center justify-content-center" style="height: 140px; background: linear-gradient(135deg, #dc3545, #8b1e28);">
+              <i class="fas fa-chart-area" style="font-size: 2.5rem; color: rgba(255,255,255,0.9);"></i>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="badge bg-primary-subtle text-primary">Personnel</span>
+                <span class="text-muted text-small"><i class="fab fa-python me-1"></i>Bokeh</span>
+              </div>
+              <h3 class="h6 fw-bold mb-2">Dashboard de suivi du Covid-19</h3>
+              <p class="text-muted text-small mb-2"><strong>Contexte :</strong> Suivre en temps réel l'évolution de la pandémie à partir de données publiques.</p>
+              <p class="text-muted text-small mb-2"><strong>Solution :</strong> Dashboard interactif développé avec Bokeh, présentant courbes d'évolution, cartes et indicateurs clés par pays.</p>
+              <p class="text-muted text-small mb-3"><strong>Résultat :</strong> Outil de visualisation clair, mis à jour automatiquement à partir des sources de données publiques.</p>
+              <a href="#" target="_blank" class="text-small">Voir le projet <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Annotation d'images -->
+        <div class="col-md-6 col-lg-4">
+          <div class="h-100 border rounded-4 overflow-hidden shadow-sm">
+            <div class="d-flex align-items-center justify-content-center" style="height: 140px; background: linear-gradient(135deg, #fd7e14, #a8530c);">
+              <i class="fas fa-draw-polygon" style="font-size: 2.5rem; color: rgba(255,255,255,0.9);"></i>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="badge bg-primary-subtle text-primary">Personnel</span>
+                <span class="text-muted text-small"><i class="fab fa-python me-1"></i>TensorFlow</span>
+              </div>
+              <h3 class="h6 fw-bold mb-2">Annotation d'images</h3>
+              <p class="text-muted text-small mb-2"><strong>Contexte :</strong> Préparer des jeux de données labellisés pour l'entraînement de modèles de vision par ordinateur.</p>
+              <p class="text-muted text-small mb-2"><strong>Solution :</strong> Outil d'annotation d'images avec TensorFlow pour générer des datasets exploitables en détection/classification d'objets.</p>
+              <p class="text-muted text-small mb-3"><strong>Résultat :</strong> Pipeline d'annotation réutilisable, réduisant le temps de préparation des données pour mes autres projets ML.</p>
+              <a href="#" target="_blank" class="text-small">Voir le projet <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Déploiement JupyterHub -->
+        <div class="col-md-6 col-lg-4">
+          <div class="h-100 border rounded-4 overflow-hidden shadow-sm">
+            <div class="d-flex align-items-center justify-content-center" style="height: 140px; background: linear-gradient(135deg, #198754, #0f5132);">
+              <i class="fas fa-server" style="font-size: 2.5rem; color: rgba(255,255,255,0.9);"></i>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="badge bg-success-subtle text-success">Professionnel</span>
+                <span class="text-muted text-small"><i class="fas fa-tools me-1"></i>JupyterHub</span>
+              </div>
+              <h3 class="h6 fw-bold mb-2">Déploiement de JupyterHub on-premises</h3>
+              <p class="text-muted text-small mb-2"><strong>Contexte :</strong> Offrir aux équipes data un environnement de travail collaboratif et centralisé.</p>
+              <p class="text-muted text-small mb-2"><strong>Solution :</strong> Installation, configuration et sécurisation d'un serveur JupyterHub on-premises pour un usage multi-utilisateurs.</p>
+              <p class="text-muted text-small mb-3"><strong>Résultat :</strong> Environnement de travail mutualisé, facilitant la collaboration et la standardisation des outils au sein de l'équipe.</p>
+              <a href="#" target="_blank" class="text-small">Voir le projet <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Déploiement Apache Airflow -->
+        <div class="col-md-6 col-lg-4">
+          <div class="h-100 border rounded-4 overflow-hidden shadow-sm">
+            <div class="d-flex align-items-center justify-content-center" style="height: 140px; background: linear-gradient(135deg, #0dcaf0, #087990);">
+              <i class="fas fa-stream" style="font-size: 2.5rem; color: rgba(255,255,255,0.9);"></i>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="badge bg-success-subtle text-success">Professionnel</span>
+                <span class="text-muted text-small"><i class="fas fa-tools me-1"></i>Airflow</span>
+              </div>
+              <h3 class="h6 fw-bold mb-2">Déploiement d'Apache Airflow on-premises</h3>
+              <p class="text-muted text-small mb-2"><strong>Contexte :</strong> Automatiser et fiabiliser l'orchestration des flux ETL de l'équipe data.</p>
+              <p class="text-muted text-small mb-2"><strong>Solution :</strong> Installation, configuration et mise en production d'Apache Airflow on-premises pour la planification des pipelines de données.</p>
+              <p class="text-muted text-small mb-3"><strong>Résultat :</strong> Orchestration centralisée et monitorée des jobs ETL, avec des alertes en cas d'échec.</p>
+              <a href="#" target="_blank" class="text-small">Voir le projet <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Carte géographique avec Bokeh -->
+        <div class="col-md-6 col-lg-4">
+          <div class="h-100 border rounded-4 overflow-hidden shadow-sm">
+            <div class="d-flex align-items-center justify-content-center" style="height: 140px; background: linear-gradient(135deg, #d63384, #8a1f56);">
+              <i class="fas fa-map-marked-alt" style="font-size: 2.5rem; color: rgba(255,255,255,0.9);"></i>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="badge bg-success-subtle text-success">Professionnel</span>
+                <span class="text-muted text-small"><i class="fab fa-python me-1"></i>Bokeh</span>
+              </div>
+              <h3 class="h6 fw-bold mb-2">Rapport et carte géographique</h3>
+              <p class="text-muted text-small mb-2"><strong>Contexte :</strong> Donner une lecture géographique de la performance commerciale à l'équipe dirigeante.</p>
+              <p class="text-muted text-small mb-2"><strong>Solution :</strong> Rapport interactif avec carte géographique développée sous Bokeh, croisant indicateurs métier et zones géographiques.</p>
+              <p class="text-muted text-small mb-3"><strong>Résultat :</strong> Aide à la décision facilitée pour les arbitrages territoriaux et commerciaux.</p>
+              <a href="#" target="_blank" class="text-small">Voir le projet <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Conception d'un datamart -->
+        <div class="col-md-6 col-lg-4">
+          <div class="h-100 border rounded-4 overflow-hidden shadow-sm">
+            <div class="d-flex align-items-center justify-content-center" style="height: 140px; background: linear-gradient(135deg, #6c757d, #3d4247);">
+              <i class="fas fa-sitemap" style="font-size: 2.5rem; color: rgba(255,255,255,0.9);"></i>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="badge bg-success-subtle text-success">Professionnel</span>
+                <span class="text-muted text-small"><i class="fas fa-database me-1"></i>SQL</span>
+              </div>
+              <h3 class="h6 fw-bold mb-2">Conception d'un datamart BI</h3>
+              <p class="text-muted text-small mb-2"><strong>Contexte :</strong> Répondre à un besoin métier de reporting fiable et performant.</p>
+              <p class="text-muted text-small mb-2"><strong>Solution :</strong> Modélisation et conception d'un datamart dédié, structuré pour répondre aux besoins de reporting BI de l'équipe.</p>
+              <p class="text-muted text-small mb-3"><strong>Résultat :</strong> Reporting simplifié et temps de génération des rapports réduit grâce à une donnée pré-agrégée et fiable.</p>
+              <a href="#" target="_blank" class="text-small">Voir le projet <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Table Activity (asof) -->
+        <div class="col-md-6 col-lg-4">
+          <div class="h-100 border rounded-4 overflow-hidden shadow-sm">
+            <div class="d-flex align-items-center justify-content-center" style="height: 140px; background: linear-gradient(135deg, #ffc107, #a67c00);">
+              <i class="fas fa-user-clock" style="font-size: 2.5rem; color: rgba(255,255,255,0.9);"></i>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="badge bg-success-subtle text-success">Professionnel</span>
+                <span class="text-muted text-small"><i class="fas fa-database me-1"></i>SQL</span>
+              </div>
+              <h3 class="h6 fw-bold mb-2">Table Activity (asof)</h3>
+              <p class="text-muted text-small mb-2"><strong>Contexte :</strong> Suivre précisément la dernière date d'activité de chaque client pour les analyses de comportement.</p>
+              <p class="text-muted text-small mb-2"><strong>Solution :</strong> Implémentation d'une table de type "activity" avec logique asof, permettant de reconstituer l'état d'activité d'un client à n'importe quelle date.</p>
+              <p class="text-muted text-small mb-3"><strong>Résultat :</strong> Base fiable pour les analyses de churn et de comportement client, réutilisée par plusieurs équipes.</p>
+              <a href="#" target="_blank" class="text-small">Voir le projet <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. Survival Rate des Gross Addition -->
+        <div class="col-md-6 col-lg-4">
+          <div class="h-100 border rounded-4 overflow-hidden shadow-sm">
+            <div class="d-flex align-items-center justify-content-center" style="height: 140px; background: linear-gradient(135deg, #20c997, #0f7a5c);">
+              <i class="fas fa-chart-line" style="font-size: 2.5rem; color: rgba(255,255,255,0.9);"></i>
+            </div>
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="badge bg-success-subtle text-success">Professionnel</span>
+                <span class="text-muted text-small"><i class="fas fa-chart-bar me-1"></i>Analytics</span>
+              </div>
+              <h3 class="h6 fw-bold mb-2">Survival Rate des Gross Additions</h3>
+              <p class="text-muted text-small mb-2"><strong>Contexte :</strong> Mesurer la rétention des nouveaux clients (Gross Additions) dans le temps.</p>
+              <p class="text-muted text-small mb-2"><strong>Solution :</strong> Analyse de survie appliquée aux cohortes de nouveaux clients pour suivre leur taux de maintien à différents horizons.</p>
+              <p class="text-muted text-small mb-3"><strong>Résultat :</strong> Indicateur clé partagé avec l'équipe dirigeante pour évaluer la qualité des acquisitions et ajuster les stratégies commerciales.</p>
+              <a href="#" target="_blank" class="text-small">Voir le projet <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-5 bg-primary text-white text-center">
+    <div class="container py-4">
+      <h2 class="text-uppercase mb-4">Prêt à révéler tout le potentiel de vos données ?</h2>
+      <p class="lead mb-5">Transformons ensemble vos données en outils stratégiques d'aide à la décision.</p>
+      <a href="index.html#contact" class="btn btn-outline-light btn-lg text-uppercase px-5">Contactez-moi</a>
+    </div>
+  </section>
+
+  <!-- Footer-->
+  <footer class="pt-5">
+    <div class="container text-center py-5">
+        <div class="row px-4">
+            <div class="col-lg-7 mx-auto">
+                <h2 class="text-uppercase mb-0">Joseph Konka </h2>
+                <h6 class="text-primary text-uppercase mb-0 letter-spacing-3">Senior Data Analyst | Data Scientist</h6>
+                <p class="text-muted my-4">Project Management - Data Engineering - Data Analytics - Backend Python</p>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"><a class="social-link" href="https://wa.me/+22891518923" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                    <li class="list-inline-item"><a class="social-link" href="https://github.com/joekakone" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li class="list-inline-item"><a class="social-link" href="https://www.linkedin.com/in/joseph-koami-konka" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li class="list-inline-item"><a class="social-link" href="https://web.facebook.com/joekakonepage" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="list-inline-item"><a class="social-link" href="https://twitter.com/joekakone" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a class="social-link" href="https://www.youtube.com/@algojungle" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyrights px-4">
+        <div class="container py-4 border-top text-center">
+        <p class="mb-0 text-muted py-2">&copy; All rights reserved. Template designed by 
+            href="https://bootstrapious.com/p/bootstrap-resume">Bootstrapious</a>. </p>
+        </div>
+    </div>
+  </footer>
+
+  <script src="https://joekakone.github.io/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://joekakone.github.io/static/js/front.js"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9BXFEB6W8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-L9BXFEB6W8');
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2980760029476176"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
